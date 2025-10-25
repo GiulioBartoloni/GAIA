@@ -1,0 +1,17 @@
+Unit,ConversionRate,TargetUnit
+mg,0.000001,kg
+g,0.001,kg
+kg,1,kg
+t,1000,kg
+q,100,kg
+lb,0.453592,kg
+oz,0.0283495,kg
+ml,0.001,l
+cl,0.01,l
+l,1,l
+hl,100,l
+m3,1000,l
+gal,3.78541,l
+fl oz,0.0295735,l
+kwh,1,kwh
+mwh,1000,kwh

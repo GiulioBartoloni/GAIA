@@ -1,0 +1,11 @@
+# uv lock
+uv.lock
+
+# temp xlsx files
+.~lock*
+
+# uv project file
+pyproject.toml
+
+# python venv
+.venv
