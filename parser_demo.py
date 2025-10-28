@@ -7,6 +7,7 @@ import re
 
 import pandas as pd
 import streamlit as st
+from pandas.api.types import is_numeric_dtype
 
 INPUT_DATASET_PATH = "data/input_dataset_v.1.xlsx"
 UNITS_OF_MEASUREMENT_DATASET_PATH = "data/units_of_measurement.csv"
@@ -85,7 +86,8 @@ if uploaded_file is not None:
     cash_flow_dataset[['Amount', 'Unit']] = cash_flow_dataset['Description'].str.extract(pattern, flags=re.IGNORECASE)
 
     cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='Amount')
-    cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='Amount_EUR')
+    if not is_numeric_dtype(cash_flow_dataset['Amount_EUR']):
+        cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='Amount_EUR')
 
     cash_flow_dataset = standardize_units_of_measurement(cash_flow_dataset)
 
