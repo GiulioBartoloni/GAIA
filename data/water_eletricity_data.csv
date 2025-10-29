@@ -1,0 +1,820 @@
+Description,Class
+Electricity Bill - Offices,electricity
+Electricity Bill - Irrigation Pumps,electricity
+Electricity Bill - Cold storage,electricity
+Electric power consumption - Main facility,electricity
+Monthly electricity charges,electricity
+Power bill - Warehouse,electricity
+Electrical utility payment,electricity
+Energy bill - Processing plant,electricity
+Electricity usage charges,electricity
+Power consumption invoice,electricity
+Electric service - Monthly,electricity
+Utility bill for electricity,electricity
+Electricity account payment,electricity
+Power supply charges,electricity
+Monthly electric bill,electricity
+Electricity Bill - Manufacturing,electricity
+Energy consumption - Factory,electricity
+Electric meter reading charges,electricity
+Power utility payment,electricity
+Electricity invoice - Operations,electricity
+Water supply - Irrigation system,water
+Water Bill - Offices,water
+Water and sewer charges,water
+Municipal water service,water
+Water utility payment,water
+Water consumption charges,water
+Water service - Main facility,water
+Monthly water bill,water
+Water usage invoice,water
+Water supply charges,water
+Water utility - Operations,water
+Water service payment,water
+Water consumption - Factory,water
+Water Bill - Processing plant,water
+Monthly water charges,water
+Water meter reading charges,water
+Water supply invoice,water
+Water usage - Industrial,water
+Water service charges,water
+Water Bill - Warehouse,water
+Invoice #45-A Agricultural diesel,other
+Payment for legal services,other
+Purchase Ammonium Nitrate 10000tons,other
+Tractor T-100 Maintenance,other
+Invoice #88-B Diesel fuel,other
+Office stationery purchase,other
+Seed purchase - Wheat variety A,other
+Pesticide purchase - Herbicide XL,other
+Monthly salary payment,other
+Insurance premium - Equipment,other
+Fertilizer - Potassium mix,other
+Harvester maintenance service,other
+Accounting software subscription,other
+Seed purchase - Corn hybrid B,other
+Telephone and internet services,other
+Fungicide treatment supplies,other
+Warehouse rent payment,other
+Irrigation system repair,other
+Tax consulting services,other
+Vehicle insurance premium,other
+Electricity costs - Building A,electricity
+Power bill - Office complex,electricity
+Electric utility - Monthly charge,electricity
+Electricity payment - Facilities,electricity
+Energy bill - Production floor,electricity
+Monthly power invoice,electricity
+Electricity charges - Operations,electricity
+Utility electric service,electricity
+Power consumption - Industrial,electricity
+Electricity Bill - Workshop,electricity
+Electric service charges,electricity
+Monthly electricity invoice,electricity
+Power supply bill,electricity
+Electricity usage - Main site,electricity
+Energy consumption charges,electricity
+Electric utility bill - Monthly,electricity
+Electricity payment invoice,electricity
+Power charges - Facility,electricity
+Monthly electric usage,electricity
+Electricity Bill - Storage facility,electricity
+Water Bill - Irrigation facilities,water
+Water consumption - Agricultural,water
+Water supply - Production area,water
+Monthly water invoice,water
+Water service - Manufacturing,water
+Water usage charges,water
+Water utility bill,water
+Water consumption invoice,water
+Water Bill - Greenhouse,water
+Water supply - Processing,water
+Water service invoice,water
+Water charges - Operations,water
+Monthly water payment,water
+Water usage - Facility,water
+Water Bill - Livestock,water
+Water utility charges,water
+Water consumption - Plant,water
+Water service - Industrial site,water
+Water supply payment,water
+Water Bill - Cooling system,water
+Office cleaning services,other
+Fertilizer - Nitrogen compound,other
+Packaging materials purchase,other
+Tractor tire replacement,other
+Laboratory soil testing,other
+Grain storage facility maintenance,other
+Pesticide purchase - Insecticide Pro,other
+Office supplies and printer toner,other
+Property tax payment,other
+Seed purchase - Soybean premium,other
+Temporary labor - Planting season,other
+Fertilizer - Phosphate blend,other
+Equipment transport services,other
+Combine harvester annual service,other
+Crop insurance premium,other
+Safety equipment and workwear,other
+Bank service charges,other
+Pesticide purchase - Weed control,other
+Packaging tape and boxes,other
+Vehicle fleet maintenance,other
+Electric bill - Administration,electricity
+Power invoice - Production,electricity
+Electricity charges - Plant,electricity
+Monthly energy bill,electricity
+Electric service payment,electricity
+Electricity Bill - Laboratory,electricity
+Power utility invoice,electricity
+Energy charges - Operations,electricity
+Electricity consumption bill,electricity
+Electric power invoice,electricity
+Monthly electricity payment,electricity
+Power bill - Manufacturing unit,electricity
+Electricity usage invoice,electricity
+Energy bill - Warehouse,electricity
+Electric utility charges,electricity
+Electricity Bill - Pumping station,electricity
+Power consumption charges,electricity
+Monthly electric service,electricity
+Electricity invoice - Building B,electricity
+Energy supply charges,electricity
+Water Bill - Administration building,water
+Water supply charges - Monthly,water
+Water consumption - Warehouse,water
+Water service - Factory floor,water
+Municipal water invoice,water
+Water usage - Processing plant,water
+Water Bill - Office complex,water
+Water utility payment - Monthly,water
+Water charges - Manufacturing,water
+Water supply - Industrial facility,water
+Water consumption charges - Factory,water
+Water service - Distribution center,water
+Monthly water usage,water
+Water Bill - Production facility,water
+Water utility invoice,water
+Water supply - Operations center,water
+Water charges - Plant operations,water
+Water consumption - Office,water
+Water service payment - Monthly,water
+Water Bill - Equipment cooling,water
+Legal consultation - Contracts,other
+Fertilizer - Micronutrient mix,other
+Temporary labor - Harvest season,other
+Seed treatment chemicals,other
+Transport fuel cards top-up,other
+Grain dryer maintenance,other
+Marketing and advertising,other
+Office furniture replacement,other
+Fuel purchase - Diesel,other
+Machinery repair services,other
+Building maintenance,other
+Computer equipment purchase,other
+Professional consulting fees,other
+Annual insurance renewal,other
+Pest control services,other
+Waste disposal services,other
+Security system maintenance,other
+Printer lease payment,other
+Janitorial supplies,other
+Fire extinguisher inspection,other
+Electricity Bill - Greenhouse,electricity
+Power charges - Facility management,electricity
+Electric service - Industrial site,electricity
+Monthly electricity bill - HQ,electricity
+Energy invoice - Processing,electricity
+Electricity payment - Utilities,electricity
+Power bill - Production facility,electricity
+Electric utility - Operations,electricity
+Electricity charges - Main building,electricity
+Monthly power charges,electricity
+Energy consumption invoice,electricity
+Electricity Bill - Workshop area,electricity
+Power supply invoice,electricity
+Electric service charges - Monthly,electricity
+Electricity usage - Factory,electricity
+Energy bill - Administrative,electricity
+Power consumption - Warehouse,electricity
+Electricity invoice - Industrial,electricity
+Monthly electric charges,electricity
+Electricity Bill - Cold room,electricity
+Water Bill - Cleaning operations,water
+Water supply invoice - Factory,water
+Water consumption - Distribution,water
+Water service - Warehouse facility,water
+Monthly water bill - Operations,water
+Water usage charges - Plant,water
+Water utility - Manufacturing site,water
+Water charges - Processing facility,water
+Water supply payment - Monthly,water
+Water Bill - Sanitation,water
+Water consumption invoice - Operations,water
+Water service - Production area,water
+Water usage - Industrial park,water
+Water supply charges - Factory,water
+Municipal water bill,water
+Water Bill - Washroom facilities,water
+Water utility charges - Monthly,water
+Water consumption - Manufacturing,water
+Water service invoice - Facility,water
+Water charges - Distribution center,water
+HVAC system maintenance,other
+Plumbing repairs,other
+Paint and hardware supplies,other
+Landscaping services,other
+Snow removal services,other
+Window cleaning,other
+Carpet cleaning services,other
+Pest inspection,other
+Roof maintenance,other
+Door repair services,other
+Lock replacement,other
+Signage installation,other
+Parking lot maintenance,other
+Fence repair,other
+Lighting fixture replacement,other
+Flooring repairs,other
+Elevator maintenance,other
+Sprinkler system repair,other
+IT support services,other
+Software licensing fees,other
+Power bill - Storage warehouse,electricity
+Electricity charges - Facility A,electricity
+Monthly energy charges,electricity
+Electric utility payment - Monthly,electricity
+Electricity Bill - Processing unit,electricity
+Power invoice - Operations,electricity
+Energy bill - Manufacturing,electricity
+Electricity consumption charges,electricity
+Electric service - Facility,electricity
+Monthly power bill,electricity
+Electricity usage - Building C,electricity
+Power supply charges - Monthly,electricity
+Electricity invoice - Warehouse,electricity
+Energy charges - Production,electricity
+Electric bill - Operations center,electricity
+Electricity Bill - Distribution center,electricity
+Power charges - Industrial park,electricity
+Monthly electricity usage,electricity
+Energy invoice - Plant,electricity
+Electricity payment - Facility B,electricity
+Water Bill - Field irrigation,water
+Water supply - Warehouse operations,water
+Water consumption charges - Production,water
+Water service - Office building,water
+Monthly water invoice - Factory,water
+Water usage - Distribution facility,water
+Water Bill - Process water,water
+Water utility payment - Operations,water
+Water charges - Industrial facility,water
+Water supply invoice - Manufacturing,water
+Water consumption - Processing unit,water
+Water service - Factory operations,water
+Water usage charges - Warehouse,water
+Water Bill - Boiler feed water,water
+Municipal water charges,water
+Water supply - Production floor,water
+Water consumption invoice - Factory,water
+Water service payment - Operations,water
+Water charges - Office complex,water
+Water Bill - Fire suppression system,water
+Cloud storage subscription,other
+Network maintenance,other
+Hardware upgrade costs,other
+Cybersecurity services,other
+Database management fees,other
+Email hosting services,other
+Domain registration,other
+SSL certificate renewal,other
+Backup services,other
+Video conferencing subscription,other
+Project management software,other
+CRM system subscription,other
+Antivirus software license,other
+Web hosting fees,other
+Technical training courses,other
+IT consulting services,other
+Server maintenance,other
+VPN service subscription,other
+Employee training programs,other
+Health and safety equipment,other
+Electric power bill - Main office,electricity
+Electricity charges - Workshop B,electricity
+Monthly power invoice - Factory,electricity
+Energy bill - Facility management,electricity
+Electricity Bill - Administration building,electricity
+Power consumption - Plant operations,electricity
+Electric utility - Industrial facility,electricity
+Electricity payment - Production site,electricity
+Monthly energy invoice,electricity
+Power bill - Operations,electricity
+Electricity usage charges - Monthly,electricity
+Energy consumption - Warehouse facility,electricity
+Electric service - Manufacturing plant,electricity
+Electricity invoice - Cold storage unit,electricity
+Power charges - Processing facility,electricity
+Monthly electricity charges - Factory,electricity
+Energy bill - Office building,electricity
+Electricity Bill - Equipment room,electricity
+Power supply - Operations center,electricity
+Electric utility invoice - Production,electricity
+Water usage invoice - Production,water
+Water Bill - Facility operations,water
+Water supply charges - Processing,water
+Water consumption - Industrial site,water
+Water service - Manufacturing plant,water
+Monthly water payment - Warehouse,water
+Water utility invoice - Factory,water
+Water charges - Operations facility,water
+Water supply - Distribution operations,water
+Water Bill - Cooling towers,water
+Water consumption charges - Office,water
+Water service invoice - Production,water
+Water usage - Factory facility,water
+Water supply payment - Operations,water
+Water Bill - Steam generation,water
+Water utility charges - Manufacturing,water
+Water consumption - Warehouse site,water
+Water service - Processing operations,water
+Water charges - Industrial operations,water
+Monthly water bill - Production,water
+First aid supplies,other
+Uniforms and protective gear,other
+Employee wellness program,other
+Staff recognition awards,other
+Team building activities,other
+Professional development courses,other
+Industry conference fees,other
+Trade show participation,other
+Business travel expenses,other
+Hotel accommodations,other
+Meal reimbursements,other
+Transportation costs,other
+Mileage reimbursement,other
+Parking fees,other
+Toll road charges,other
+Rental car expenses,other
+Flight tickets,other
+Taxi and ride-sharing,other
+Office rent payment,other
+Property lease,other
+Electricity Bill - Maintenance shop,electricity
+Power invoice - Facility operations,electricity
+Monthly electric bill - Plant,electricity
+Energy charges - Warehouse operations,electricity
+Electricity consumption - Office,electricity
+Electric service payment - Monthly,electricity
+Power bill - Processing area,electricity
+Electricity charges - Distribution,electricity
+Monthly energy bill - Manufacturing,electricity
+Electric utility - Warehouse facility,electricity
+Electricity invoice - Production floor,electricity
+Power consumption charges - Factory,electricity
+Energy bill - Industrial operations,electricity
+Electricity Bill - Packing area,electricity
+Monthly power charges - Facility,electricity
+Electric service - Distribution center,electricity
+Electricity payment - Workshop,electricity
+Power supply invoice - Operations,electricity
+Energy consumption - Processing plant,electricity
+Electricity usage - Manufacturing unit,electricity
+Water Bill - Landscaping irrigation,water
+Water supply invoice - Operations,water
+Water consumption - Factory floor,water
+Water service - Distribution warehouse,water
+Monthly water usage - Manufacturing,water
+Water utility payment - Facility,water
+Water charges - Processing plant,water
+Water supply - Office operations,water
+Water Bill - Drinking water,water
+Water consumption invoice - Warehouse,water
+Water service - Industrial operations,water
+Water usage charges - Factory,water
+Water supply charges - Production,water
+Water Bill - Laboratory operations,water
+Municipal water service - Monthly,water
+Water consumption - Operations center,water
+Water utility invoice - Processing,water
+Water service payment - Factory,water
+Water charges - Manufacturing facility,water
+Water Bill - Wash stations,water
+Equipment rental,other
+Vehicle lease payment,other
+Forklift rental,other
+Generator rental,other
+Scaffolding rental,other
+Tool rental,other
+Storage unit rental,other
+Container rental,other
+Trailer rental,other
+Conference room rental,other
+Event space rental,other
+Temporary office rental,other
+Parking space lease,other
+Land lease payment,other
+Billboard rental,other
+Display booth rental,other
+Audio equipment rental,other
+Catering services,other
+Legal filing fees,other
+Patent application fees,other
+Power charges - Industrial facility,electricity
+Electricity Bill - Quality control lab,electricity
+Monthly electricity invoice - Warehouse,electricity
+Energy bill - Operations facility,electricity
+Electric utility charges - Monthly,electricity
+Electricity payment - Processing,electricity
+Power bill - Manufacturing area,electricity
+Electricity consumption invoice - Factory,electricity
+Electric service - Production facility,electricity
+Monthly power payment,electricity
+Electricity charges - Office complex,electricity
+Energy invoice - Distribution,electricity
+Power supply charges - Warehouse,electricity
+Electricity Bill - Loading dock,electricity
+Electric utility - Processing facility,electricity
+Monthly energy charges - Operations,electricity
+Electricity usage invoice - Plant,electricity
+Power consumption - Office building,electricity
+Energy bill - Facility operations,electricity
+Electricity invoice - Manufacturing site,electricity
+Water usage - Processing facility,water
+Water Bill - Quality control lab,water
+Water supply payment - Manufacturing,water
+Water consumption charges - Distribution,water
+Water service invoice - Operations,water
+Monthly water charges - Factory,water
+Water utility - Warehouse operations,water
+Water charges - Production site,water
+Water supply - Industrial park,water
+Water Bill - Humidification system,water
+Water consumption - Manufacturing area,water
+Water service - Factory warehouse,water
+Water usage invoice - Operations,water
+Water supply charges - Office,water
+Water Bill - Cleaning processes,water
+Water utility charges - Production,water
+Water consumption invoice - Processing,water
+Water service - Distribution facility,water
+Water charges - Warehouse facility,water
+Monthly water payment - Operations,water
+Trademark registration,other
+Notary services,other
+Document translation,other
+Courier services,other
+Shipping and freight,other
+Customs clearance fees,other
+Import duties,other
+Export documentation,other
+Logistics services,other
+Warehousing fees,other
+Inventory management,other
+Quality control inspection,other
+Product testing services,other
+Certification fees,other
+Compliance auditing,other
+Environmental assessment,other
+Safety inspection,other
+Equipment calibration,other
+Advertising campaign,other
+Social media marketing,other
+Electric power charges - Warehouse,electricity
+Electricity Bill - Research facility,electricity
+Monthly power bill - Operations,electricity
+Energy consumption charges - Factory,electricity
+Electricity payment invoice - Plant,electricity
+Power invoice - Manufacturing,electricity
+Electric service charges - Facility,electricity
+Electricity usage - Production area,electricity
+Monthly electricity bill - Distribution,electricity
+Energy bill - Processing facility,electricity
+Power supply invoice - Factory,electricity
+Electricity charges - Storage area,electricity
+Electric utility payment - Operations,electricity
+Electricity Bill - Assembly line,electricity
+Monthly energy invoice - Warehouse,electricity
+Power consumption - Processing unit,electricity
+Electricity invoice - Office facility,electricity
+Energy charges - Manufacturing plant,electricity
+Electric bill - Production center,electricity
+Electricity payment - Industrial site,electricity
+Water Bill - Equipment washing,water
+Water supply invoice - Factory floor,water
+Water consumption - Warehouse operations,water
+Water service - Production facility,water
+Monthly water bill - Manufacturing,water
+Water usage charges - Distribution,water
+Water utility payment - Processing,water
+Water charges - Operations warehouse,water
+Water supply - Factory operations,water
+Water Bill - Chiller plant,water
+Water consumption charges - Industrial,water
+Water service invoice - Warehouse,water
+Water usage - Production operations,water
+Water supply payment - Factory,water
+Water Bill - Agricultural use,water
+Municipal water invoice - Operations,water
+Water consumption - Office facility,water
+Water utility charges - Manufacturing,water
+Water service - Processing center,water
+Water charges - Distribution operations,water
+Print advertising,other
+Radio advertising,other
+Television commercial,other
+Online advertising,other
+Billboard advertising,other
+Promotional materials,other
+Brochure printing,other
+Business card printing,other
+Catalog production,other
+Website development,other
+SEO services,other
+Content creation,other
+Graphic design services,other
+Photography services,other
+Video production,other
+Market research,other
+Customer survey,other
+Brand consulting,other
+Medical services,other
+Health screening,other
+Power bill - Office operations,electricity
+Electricity charges - Production facility,electricity
+Monthly electric service - Warehouse,electricity
+Energy invoice - Manufacturing unit,electricity
+Electricity Bill - Shipping area,electricity
+Electric utility - Factory operations,electricity
+Electricity consumption - Plant facility,electricity
+Power charges - Operations building,electricity
+Monthly electricity payment - Office,electricity
+Energy bill - Distribution facility,electricity
+Electricity usage charges - Warehouse,electricity
+Power supply - Processing center,electricity
+Electric service invoice - Factory,electricity
+Electricity Bill - Testing laboratory,electricity
+Monthly power invoice - Production,electricity
+Energy consumption - Office operations,electricity
+Electricity charges - Manufacturing site,electricity
+Power bill - Facility management,electricity
+Electric utility invoice - Warehouse,electricity
+Electricity payment - Operations plant,electricity
+Water Bill - Crop irrigation,water
+Water supply charges - Warehouse,water
+Water consumption invoice - Production,water
+Water service - Office complex,water
+Monthly water usage - Factory,water
+Water utility invoice - Distribution,water
+Water charges - Manufacturing operations,water
+Water supply - Processing warehouse,water
+Water Bill - Dust suppression,water
+Water consumption - Factory management,water
+Water service payment - Warehouse,water
+Water usage charges - Operations,water
+Water supply invoice - Production,water
+Water Bill - Vehicle washing,water
+Water utility charges - Processing,water
+Water consumption charges - Factory,water
+Water service - Industrial facility,water
+Water charges - Warehouse district,water
+Monthly water payment - Manufacturing,water
+Water Bill - Spray systems,water
+Occupational health assessment,other
+Drug testing services,other
+Employee physical exams,other
+Vaccination program,other
+Mental health services,other
+Physiotherapy services,other
+Dental services,other
+Vision care services,other
+Hearing tests,other
+Ergonomic assessment,other
+Workplace wellness program,other
+Gym membership,other
+Nutrition counseling,other
+Stress management workshop,other
+Health insurance premium,other
+Life insurance premium,other
+Disability insurance,other
+Workers compensation insurance,other
+Accounting services,other
+Bookkeeping services,other
+Electric power invoice - Manufacturing,electricity
+Electricity Bill - Receiving area,electricity
+Monthly energy bill - Factory operations,electricity
+Power consumption charges - Warehouse,electricity
+Electricity usage - Distribution center,electricity
+Energy charges - Processing facility,electricity
+Electric service payment - Operations,electricity
+Electricity invoice - Production plant,electricity
+Power bill - Industrial operations,electricity
+Monthly electricity charges - Facility,electricity
+Energy bill - Manufacturing center,electricity
+Electricity payment - Warehouse facility,electricity
+Power supply charges - Factory,electricity
+Electric utility - Production area,electricity
+Electricity Bill - Packaging line,electricity
+Monthly power charges - Operations,electricity
+Energy invoice - Office complex,electricity
+Electricity consumption - Manufacturing,electricity
+Power charges - Distribution facility,electricity
+Electric bill - Processing operations,electricity
+Water usage invoice - Manufacturing,water
+Water Bill - Food processing,water
+Water supply payment - Operations,water
+Water consumption - Distribution center,water
+Water service invoice - Factory,water
+Monthly water charges - Processing,water
+Water utility payment - Warehouse,water
+Water charges - Production facility,water
+Water supply - Operations district,water
+Water Bill - Restroom facilities,water
+Water consumption invoice - Manufacturing,water
+Water service - Factory district,water
+Water usage - Warehouse management,water
+Water supply charges - Distribution,water
+Water Bill - Heating system,water
+Municipal water bill - Operations,water
+Water consumption charges - Processing,water
+Water utility invoice - Factory,water
+Water service - Production warehouse,water
+Water charges - Operations facility,water
+Payroll processing,other
+Tax preparation,other
+Financial auditing,other
+Budget consulting,other
+Financial planning,other
+Investment advisory,other
+Credit check services,other
+Collection agency fees,other
+Bank loan interest,other
+Credit card processing fees,other
+Merchant services,other
+Wire transfer fees,other
+Currency exchange fees,other
+Check printing,other
+Cashier check fees,other
+Safe deposit box,other
+Treasury services,other
+Financial software,other
+Recruitment agency fees,other
+Job posting fees,other
+Electricity charges - Factory floor,electricity
+Power invoice - Warehouse operations,electricity
+Monthly electric bill - Production,electricity
+Energy bill - Distribution operations,electricity
+Electricity Bill - Service area,electricity
+Electric utility charges - Factory,electricity
+Electricity payment - Manufacturing facility,electricity
+Power consumption - Office complex,electricity
+Monthly electricity usage - Operations,electricity
+Energy invoice - Processing operations,electricity
+Electricity invoice - Industrial facility,electricity
+Power bill - Production operations,electricity
+Electric service - Manufacturing center,electricity
+Electricity charges - Warehouse facility,electricity
+Monthly energy payment - Factory,electricity
+Power supply invoice - Operations,electricity
+Electricity Bill - Break room,electricity
+Energy consumption charges - Plant,electricity
+Electric utility - Distribution center,electricity
+Electricity usage invoice - Manufacturing,electricity
+Water Bill - Mixing processes,water
+Water supply invoice - Warehouse,water
+Water consumption - Operations building,water
+Water service - Distribution warehouse,water
+Monthly water usage - Production,water
+Water utility charges - Factory,water
+Water charges - Manufacturing warehouse,water
+Water supply - Processing operations,water
+Water Bill - Conveyor cleaning,water
+Water consumption charges - Office,water
+Water service payment - Production,water
+Water usage invoice - Factory,water
+Water supply payment - Manufacturing,water
+Water Bill - Tank cleaning,water
+Water utility invoice - Operations,water
+Water consumption - Processing facility,water
+Water service - Warehouse operations,water
+Water charges - Industrial warehouse,water
+Monthly water bill - Factory,water
+Water Bill - Floor cleaning,water
+Background check services,other
+Interview expenses,other
+Relocation expenses,other
+Signing bonus,other
+Referral bonus,other
+Performance bonus,other
+Holiday bonus,other
+Overtime payment,other
+Commission payment,other
+Profit sharing,other
+Retirement contribution,other
+Severance payment,other
+Exit interview services,other
+Outplacement services,other
+HR consulting,other
+Employee handbook printing,other
+Personnel file management,other
+Time tracking software,other
+Cleaning supplies,other
+Disinfectants and sanitizers,other
+Power charges - Processing plant,electricity
+Electricity Bill - Conference room,electricity
+Monthly power bill - Factory operations,electricity
+Energy charges - Warehouse management,electricity
+Electricity consumption invoice - Operations,electricity
+Electric service charges - Production,electricity
+Electricity payment - Distribution site,electricity
+Power invoice - Manufacturing facility,electricity
+Monthly electricity bill - Industrial,electricity
+Energy bill - Operations warehouse,electricity
+Electricity usage - Factory floor,electricity
+Power supply charges - Production,electricity
+Electric utility payment - Facility,electricity
+Electricity Bill - Machine shop,electricity
+Monthly energy invoice - Operations,electricity
+Power consumption - Manufacturing area,electricity
+Electricity charges - Processing center,electricity
+Energy invoice - Warehouse operations,electricity
+Electric bill - Production facility,electricity
+Electricity invoice - Factory operations,electricity
+Water usage charges - Processing,water
+Water Bill - Evaporative cooling,water
+Water supply charges - Operations,water
+Water consumption invoice - Factory,water
+Water service invoice - Manufacturing,water
+Monthly water payment - Distribution,water
+Water utility payment - Production,water
+Water charges - Warehouse operations,water
+Water supply - Factory facility,water
+Water Bill - Compressor cooling,water
+Water consumption - Manufacturing facility,water
+Water service - Operations warehouse,water
+Water usage - Distribution operations,water
+Water supply invoice - Processing,water
+Water Bill - Air conditioning,water
+Municipal water charges - Factory,water
+Water consumption charges - Warehouse,water
+Water utility invoice - Manufacturing,water
+Water service - Production district,water
+Water charges - Processing operations,water
+Paper products,other
+Trash bags,other
+Recycling services,other
+Waste management,other
+Hazardous waste disposal,other
+Shredding services,other
+Document storage,other
+Records management,other
+Archive services,other
+Microfilm services,other
+Scanning services,other
+Data entry services,other
+Transcription services,other
+Translation services,other
+Interpretation services,other
+Proofreading services,other
+Editing services,other
+Writing services,other
+Technical manuals,other
+Industry publications,other
+Electric power bill - Production site,electricity
+Electricity charges - Operations warehouse,electricity
+Monthly power invoice - Distribution,electricity
+Energy bill - Manufacturing operations,electricity
+Electricity Bill - Tool room,electricity
+Power consumption charges - Office,electricity
+Electric utility - Processing operations,electricity
+Electricity payment - Factory facility,electricity
+Monthly electricity charges - Warehouse,electricity
+Energy invoice - Industrial operations,electricity
+Power bill - Production center,electricity
+Electricity usage charges - Manufacturing,electricity
+Electric service invoice - Operations,electricity
+Electricity Bill - Inventory area,electricity
+Monthly energy charges - Factory,electricity
+Power supply - Distribution operations,electricity
+Electricity consumption - Warehouse site,electricity
+Energy charges - Processing facility,electricity
+Electric utility invoice - Production,electricity
+Electricity invoice - Operations center,electricity
+Water Bill - Pressure testing,water
+Water supply payment - Warehouse,water
+Water consumption - Factory operations,water
+Water service - Processing district,water
+Monthly water invoice - Operations,water
+Water utility charges - Distribution,water
+Water charges - Production operations,water
+Water supply - Manufacturing site,water
+Water Bill - Hydrostatic testing,water
+Water consumption invoice - Operations,water
+Water service payment - Factory,water
+Water usage charges - Warehouse,water
+Water supply charges - Manufacturing,water
+Water Bill - Parts washing,water
+Water utility payment - Processing,water
+Water consumption - Production site,water
+Water service invoice - Distribution,water
+Wate charges - Factory operations,water
+Monthly water usage - Warehouse,water
