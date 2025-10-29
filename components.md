@@ -7,8 +7,8 @@ It's the hand-made cash flow statement we'll present in the (if we trust it enou
 
 # Amount per euro dataset
 This is a dependency for the calculation of emissions. Based on country(?)
-    - https://teseo.clal.it/en/?section=gasolio_agricolo
-    - https://www.cargopedia.net/tools
+- https://teseo.clal.it/en/?section=gasolio_agricolo
+- https://www.cargopedia.net/tools
 
 # Parser
 A python script that reads the cash flow statement and:
