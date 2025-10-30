@@ -19,7 +19,7 @@ GAIA
 │   ├── architecture.drawio
 │   └── architecture.png
 ├── requirements.txt
-└── src
+├── src
 │   └── parser_demo.py
 ├── classificator_test.ipynb
 └── parser.ipynb
