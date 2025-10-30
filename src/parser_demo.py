@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 from pandas.api.types import is_numeric_dtype
 
-INPUT_DATASET_PATH = "data/input_dataset_v.1.xlsx"
+INPUT_DATASET_PATH = "data/cash_flow_statements/input_dataset_v.1.xlsx"
 UNITS_OF_MEASUREMENT_DATASET_PATH = "data/units_of_measurement.csv"
 CONVERSION_RATES_PATH = "data/conversion_rates.csv"
 UNITS_OF_MEASUREMENT_VARIATIONS_PATH = "data/units_of_measurement_variations.json"

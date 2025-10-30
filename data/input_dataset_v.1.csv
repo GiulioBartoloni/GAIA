@@ -1,9 +1,0 @@
-Transaction_ID,Date,Description,Vendor,GL_Account (General Ledger),Amount_EUR
-1001,1/15/2025,"Invoice #45-A, Agricultural diesel",Agri-Fuel Inc.,Raw Materials Expense,"1,200.00"
-1002,1/20/2025,Electricity Bill - Offices,Global Power Ltd.,Utilities Expense,350.00
-1003,1/22/2025,Payment for legal services,Rossi Legal Firm,Professional Services,"2,500.00"
-1004,1/28/2025,"Purchase Ammonium Nitrate 10,000tons",Fertilizers Co.,Raw Materials Expense,"7,000.00"
-1005,2/2/2025,Electricity Bill - Irrigation Pumps,Global Power Ltd.,Utilities Expense,"1,800.00"
-1006,2/10/2025,Tractor T-100 Maintenance,Verdi Mechanical Shop,Repairs & Maintenance,600.00
-1007,2/15/2025,"Invoice #88-B, Diesel fuel",Agri-Fuel Inc.,Raw Materials Expense,"1,500.00"
-1008,2/20/2025,Office stationery purchase,Staples,General & Admin Expense,150.00

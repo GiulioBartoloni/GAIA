@@ -8,30 +8,28 @@ GAIA
 │   ├── components.md
 │   └── image.png
 ├── data
+│   ├── cash_flow_statements
+│   │   ├── input_dataset_v.1.xlsx
+│   │   └── synthetic_dataset.xlsx
 │   ├── conversion_rates.csv
-│   ├── electricity_data.csv
-│   ├── input_dataset_v.1.csv
-│   ├── input_dataset_v.1.xlsx
-│   ├── synthetic_dataset.xlsx
 │   ├── units_of_measurement.csv
 │   ├── units_of_measurement_variations.json
-│   ├── water_data.csv
-│   └── water_eletricity_data.csv
+│   └── xgboost_test_data.csv
 ├── meta
 │   ├── architecture.drawio
 │   └── architecture.png
 ├── requirements.txt
 └── src
-    ├── classificator_test.ipynb
-    ├── parser.ipynb
-    └── parser_demo.py
+│   └── parser_demo.py
+├── classificator_test.ipynb
+└── parser.ipynb
 ```
 The main files are:
 - `architecture_documentation`: contains info on the possible system architecture.
 - `data`: contains all datasets used.
 - `meta`: architecture graph files.
 - `requirements.txt`: lists all python libraries necessary to run all programs.
-- `src`: contains all the code.
+- `src`: contains all the `.py` code.
 
 
 # Instructions to run this code
