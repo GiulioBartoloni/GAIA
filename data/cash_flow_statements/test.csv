@@ -1,0 +1,149 @@
+Transaction_ID,Date,Description,Vendor,GL_Account,Amount_EUR,Class
+TRX001,15/01/25,Herbicide Product Sales - Europe Region,Various Distributors,Sales of Products,289000,Other
+TRX002,15/01/25,Fungicide Product Sales - North America,Various Distributors,Sales of Products,350000,Other
+TRX003,15/01/25,Seeds Product Sales - Latin America,Various Distributors,Sales of Products,304000,Other
+TRX004,16/01/25,Electricity Supply - Basel Site,Swiss Grid AG,Utilities Expense,45000,Electricity
+TRX005,16/01/25,Natural Gas Supply - Manufacturing,Gazprom Energy,Utilities Expense,38000,Heating
+TRX006,18/01/25,Water Supply - Monthey Site,Aqua Service SA,Utilities Expense,12500,Water
+TRX007,20/01/25,Chemical Raw Materials - Active Ingredients,ChemSupply International,Raw Materials Expense,156000,Other
+TRX008,20/01/25,Hazardous Waste Disposal,EcoWaste Solutions AG,Waste Disposal Expense,8900,Waste Disposal
+TRX009,22/01/25,Seed Purchase - Corn Hybrid,Seed Growers Cooperative,Raw Materials Expense,67000,Other
+TRX010,25/01/25,Packaging Materials - Bottles & Containers,PackTech Industries,Packaging Materials Expense,23400,Other
+TRX011,28/01/25,Employee Salaries - January,Payroll Department,Salaries Expense,285000,Other
+TRX012,30/01/25,Non-Hazardous Waste Removal,Municipal Waste Services,Waste Disposal Expense,3200,Waste Disposal
+TRX013,31/01/25,Insecticide Product Sales - Asia Pacific,Various Distributors,Sales of Products,196000,Other
+TRX014,05/02/25,Selective Herbicide Sales - EMEA,Agricultural Distributors Network,Sales of Products,145000,Other
+TRX015,08/02/25,Electricity Supply - Greensboro Site USA,Duke Energy,Utilities Expense,52000,Electricity
+TRX016,10/02/25,Laboratory Equipment Purchase,Scientific Instruments Ltd,Capital Expenditure,89000,Other
+TRX017,12/02/25,Intermediate Chemicals Purchase,Jiangsu Chemical Corp,Raw Materials Expense,178000,Other
+TRX018,15/02/25,Industrial Wastewater Treatment,AquaTech Services,Waste Disposal Expense,15600,Other
+TRX019,15/02/25,Fungicide Sales - MIRAVIS Technology,European Distributors,Sales of Products,425000,Other
+TRX020,18/02/25,Water Supply - UK Sites,Thames Water Business,Utilities Expense,8900,Water
+TRX021,20/02/25,Freight & Logistics - International Shipment,Kuehne + Nagel,Freight Expense,45000,Other
+TRX022,22/02/25,Seed Treatment Products Sales,North American Dealers,Sales of Products,98000,Other
+TRX023,25/02/25,IT Infrastructure Services,Accenture Technology,IT Services Expense,67000,Other
+TRX024,28/02/25,Employee Salaries - February,Payroll Department,Salaries Expense,285000,Other
+TRX025,28/02/25,Steam Supply - Manufacturing Plant,Industrial Energy Co,Utilities Expense,28000,Heating
+TRX026,03/03/25,Insecticide Sales - PLINAZOLIN Technology,Latin America Distributors,Sales of Products,187000,Other
+TRX027,05/03/25,Chemical Waste Incineration,Veolia Environmental Services,Waste Disposal Expense,12400,Waste Disposal
+TRX028,08/03/25,Seeds Sales - Soybean Varieties,Brazilian Distributors,Sales of Products,256000,Other
+TRX029,10/03/25,Electricity - Jealott's Hill Research,UK Power Networks,Utilities Expense,34000,Electricity
+TRX030,12/03/25,Formulation Tolling Services,Contract Manufacturing Partners,Manufacturing Services,234000,Other
+TRX031,15/03/25,Natural Gas - Monthey Plant,Swiss Gas Network,Utilities Expense,41000,Heating
+TRX032,18/03/25,Legal & Compliance Services,Baker McKenzie,Professional Services Expense,125000,Other
+TRX033,20/03/25,Royalty & License Income,Third Party Licensees,Royalty Income,31000,Other
+TRX034,22/03/25,Herbicide Sales - TOUCHDOWN Products,Various Customers,Sales of Products,89000,Other
+TRX035,25/03/25,Biomass Fuel Purchase,Renewable Energy Supplier,Utilities Expense,15000,Heating
+TRX036,28/03/25,Employee Salaries - March,Payroll Department,Salaries Expense,290000,Other
+TRX037,30/03/25,Water Treatment & Discharge,Environmental Services Ltd,Utilities Expense,9800,Other
+TRX038,01/04/25,Fungicide Sales - ADEPIDYN Technology,Chinese Distributors,Sales of Products,378000,Other
+TRX039,05/04/25,Agricultural Chemicals Purchase,BASF ChemTrade,Raw Materials Expense,198000,Other
+TRX040,08/04/25,Recycling Services - Non-Hazardous,RecycleCorp International,Waste Disposal Expense,4500,Waste Disposal
+TRX041,10/04/25,Seeds Sales - Corn Hybrids North America,AgriDealers USA,Sales of Products,445000,Other
+TRX042,12/04/25,Electricity - São Paulo Operations,CPFL Energia,Utilities Expense,29000,Electricity
+TRX043,15/04/25,R&D Laboratory Supplies,Sigma-Aldrich,R&D Materials Expense,78000,Other
+TRX044,18/04/25,Property Insurance Premium,Zurich Insurance,Insurance Expense,156000,Other
+TRX045,20/04/25,Seedcare Product Sales - VIBRANCE,Global Seed Treaters,Sales of Products,121000,Other
+TRX046,22/04/25,Hazardous Chemical Waste Disposal,Clean Harbors Environmental,Waste Disposal Expense,18900,Waste Disposal
+TRX047,25/04/25,Marketing Campaign - Digital,Publicis Groupe,Marketing Expense,89000,Other
+TRX048,28/04/25,Employee Salaries - April,Payroll Department,Salaries Expense,290000,Other
+TRX049,30/04/25,Natural Gas - Chinese Operations,PetroChina Gas,Utilities Expense,36000,Heating
+TRX050,02/05/25,Herbicide Sales - European Markets,CropLife Distributors,Sales of Products,267000,Other
+TRX051,05/05/25,Packaging Materials - Seed Bags,Amcor Flexibles,Packaging Materials Expense,45000,Other
+TRX052,08/05/25,Water Supply - Multiple Sites,Various Water Utilities,Utilities Expense,18500,Water
+TRX053,10/05/25,Active Ingredient Manufacturing,Toll Manufacturing Asia,Manufacturing Services,312000,Other
+TRX054,12/05/25,Electricity - Research Centers,Multi-Site Supply,Utilities Expense,67000,Electricity
+TRX055,15/05/25,Insecticide Sales - ACTARA Products,Various Retailers,Sales of Products,189000,Other
+TRX056,18/05/25,Environmental Compliance Consulting,ERM Group,Professional Services Expense,67000,Other
+TRX057,20/05/25,Seeds Sales - Vegetable Seeds,European Growers,Sales of Products,134000,Other
+TRX058,22/05/25,Wastewater Treatment Services,Suez Water Technologies,Waste Disposal Expense,21000,Other
+TRX059,25/05/25,IT Software Licenses,SAP Enterprise,IT Services Expense,45000,Other
+TRX060,28/05/25,Employee Salaries - May,Payroll Department,Salaries Expense,295000,Other
+TRX061,30/05/25,Solar Energy Installation,Green Energy Solutions,Capital Expenditure,234000,Other
+TRX062,01/06/25,Fungicide Sales - SCORE Products,Asian Markets,Sales of Products,198000,Other
+TRX063,05/06/25,Chemical Intermediates Purchase,Lanxess AG,Raw Materials Expense,167000,Other
+TRX064,08/06/25,Electricity - Manufacturing Plants,Various Suppliers,Utilities Expense,78000,Electricity
+TRX065,10/06/25,Freight - Ocean Container Shipment,Maersk Line,Freight Expense,56000,Other
+TRX066,12/06/25,Seeds Sales - Sunflower Varieties,Eastern European Distributors,Sales of Products,112000,Other
+TRX067,15/06/25,Hazardous Waste Treatment,Stericycle Environmental,Waste Disposal Expense,14500,Waste Disposal
+TRX068,18/06/25,Natural Gas Supply,Multiple Suppliers,Utilities Expense,43000,Heating
+TRX069,20/06/25,Herbicide Sales - AXIAL Technology,Russian Market,Sales of Products,145000,Other
+TRX070,22/06/25,Training & Development Programs,Corporate Learning Partners,Training Expense,34000,Other
+TRX071,25/06/25,Water Consumption - Summer Peak,Regional Water Authorities,Utilities Expense,23000,Water
+TRX072,28/06/25,Employee Salaries - June,Payroll Department,Salaries Expense,295000,Other
+TRX073,30/06/25,Equipment Maintenance Services,Industrial Maintenance Corp,Maintenance Expense,67000,Other
+TRX074,02/07/25,Insecticide Sales - ENGEO Products,North American Farmers,Sales of Products,234000,Other
+TRX075,05/07/25,Biologicals Product Sales,Sustainable Agriculture Buyers,Sales of Products,32000,Other
+TRX076,08/07/25,Electricity - Peak Summer Demand,Various Grid Operators,Utilities Expense,89000,Electricity
+TRX077,10/07/25,Seed Production Contracts,Contract Growers Network,Raw Materials Expense,345000,Other
+TRX078,12/07/25,Waste Oil Disposal,Oil Recycling Services,Waste Disposal Expense,5600,Waste Disposal
+TRX079,15/07/25,Fungicide Sales - ELATUS Range,Latin America,Sales of Products,287000,Other
+TRX080,18/07/25,Professional Solutions Sales - Turf Products,Golf Course Distributors,Sales of Products,67000,Other
+TRX081,20/07/25,Natural Gas - Reduced Summer Usage,Energy Suppliers,Utilities Expense,28000,Heating
+TRX082,22/07/25,Recruitment Services,Heidrick & Struggles,HR Services Expense,45000,Other
+TRX083,25/07/25,Laboratory Analysis Services,SGS Testing Services,R&D Services Expense,23000,Other
+TRX084,28/07/25,Employee Salaries - July,Payroll Department,Salaries Expense,298000,Other
+TRX085,30/07/25,Water Supply - Summer Irrigation,Agricultural Water Districts,Utilities Expense,19000,Water
+TRX086,01/08/25,Seeds Sales - Corn Seeds Latin America,Brazilian Cooperatives,Sales of Products,456000,Other
+TRX087,05/08/25,Herbicide Sales - DUAL GOLD,Multiple Markets,Sales of Products,178000,Other
+TRX088,08/08/25,Electricity - Production Facilities,International Suppliers,Utilities Expense,72000,Electricity
+TRX089,10/08/25,Specialty Chemicals Purchase,Clariant International,Raw Materials Expense,134000,Other
+TRX090,12/08/25,Industrial Waste Collection,Republic Services,Waste Disposal Expense,7800,Waste Disposal
+TRX091,15/08/25,Seedcare Sales - FORTENZA Technology,Seed Treatment Centers,Sales of Products,145000,Other
+TRX092,18/08/25,Audit & Assurance Services,KPMG Switzerland,Professional Services Expense,98000,Other
+TRX093,20/08/25,Natural Gas Supply,Various Providers,Utilities Expense,34000,Heating
+TRX094,22/08/25,Flowers Business Sales,Commercial Growers,Sales of Products,15000,Other
+TRX095,25/08/25,Transport & Distribution,DHL Supply Chain,Freight Expense,67000,Other
+TRX096,28/08/25,Employee Salaries - August,Payroll Department,Salaries Expense,298000,Other
+TRX097,30/08/25,Water Treatment Chemicals,Water Treatment Specialists,Utilities Expense,8900,Other
+TRX098,02/09/25,Insecticide Sales - KARATE Products,European Farmers,Sales of Products,167000,Other
+TRX099,05/09/25,Packaging Materials - Large Format,International Paper,Packaging Materials Expense,56000,Other
+TRX100,08/09/25,Electricity - Autumn Transition,Grid Operators,Utilities Expense,65000,Electricity
+TRX101,10/09/25,Herbicide Sales - GRAMOXONE,Asian Markets,Sales of Products,91000,Other
+TRX102,12/09/25,Hazardous Waste Processing,Waste Management Inc,Waste Disposal Expense,16700,Waste Disposal
+TRX103,15/09/25,Seeds Sales - Diverse Field Crops,Multiple Regions,Sales of Products,223000,Other
+TRX104,18/09/25,Natural Gas - Increased Production,Gas Suppliers,Utilities Expense,47000,Heating
+TRX105,20/09/25,Community Investment Programs,Syngenta Foundation,Community Investment Expense,2100,Other
+TRX106,22/09/25,Fungicide Sales - REVUS Technology,Various Customers,Sales of Products,198000,Other
+TRX107,25/09/25,Water Supply - Multiple Facilities,Water Utilities,Utilities Expense,16500,Water
+TRX108,28/09/25,Employee Salaries - September,Payroll Department,Salaries Expense,302000,Other
+TRX109,30/09/25,Safety Equipment & PPE,3M Safety Products,Safety Expense,34000,Other
+TRX110,02/10/25,Herbicide Sales - HALEX Products,North American Market,Sales of Products,234000,Other
+TRX111,05/10/25,Formulation Ingredients,Specialty Chemicals Ltd,Raw Materials Expense,189000,Other
+TRX112,08/10/25,Electricity - Fall Season,Power Companies,Utilities Expense,58000,Electricity
+TRX113,10/10/25,Waste Solvent Recovery,Chemical Recyclers,Waste Disposal Expense,9800,Waste Disposal
+TRX114,12/10/25,Insecticide Sales - VERTIMEC Range,Global Markets,Sales of Products,178000,Other
+TRX115,15/10/25,Natural Gas - Heating Season Start,Energy Suppliers,Utilities Expense,52000,Heating
+TRX116,18/10/25,Seeds Sales - Winter Wheat,European Farmers,Sales of Products,167000,Other
+TRX117,20/10/25,Telecommunications Services,Swisscom Enterprise,IT Services Expense,12000,Other
+TRX118,22/10/25,Manufacturing Equipment Upgrade,Siemens Industrial,Capital Expenditure,456000,Other
+TRX119,25/10/25,Water Supply & Treatment,Various Utilities,Utilities Expense,14500,Water
+TRX120,28/10/25,Employee Salaries - October,Payroll Department,Salaries Expense,302000,Other
+TRX121,30/10/25,Chemical Storage Tank Rental,Industrial Storage Solutions,Facilities Expense,23000,Other
+TRX122,01/11/25,Fungicide Sales - AMISTAR Technology,Multiple Regions,Sales of Products,312000,Other
+TRX123,05/11/25,Active Ingredients Import,Chinese Manufacturers,Raw Materials Expense,267000,Other
+TRX124,08/11/25,Electricity - Increased Heating,Utility Providers,Utilities Expense,67000,Electricity
+TRX125,10/11/25,Herbicide Sales - CALARIS Products,European Market,Sales of Products,134000,Other
+TRX126,12/11/25,Hazardous Material Transport,Specialized Logistics,Freight Expense,34000,Other
+TRX127,15/11/25,Seeds Sales - Rapeseed Varieties,Canadian Growers,Sales of Products,89000,Other
+TRX128,18/11/25,Natural Gas - Peak Heating,Gas Suppliers,Utilities Expense,61000,Heating
+TRX129,20/11/25,Non-Hazardous Waste Recycling,Recycling Partners,Waste Disposal Expense,4200,Waste Disposal
+TRX130,22/11/25,Seedcare Sales - CRUISER Technology,Global Seed Treaters,Sales of Products,198000,Other
+TRX131,25/11/25,Water Consumption - Winter Operations,Water Authorities,Utilities Expense,11000,Water
+TRX132,28/11/25,Employee Salaries - November,Payroll Department,Salaries Expense,305000,Other
+TRX133,30/11/25,Quality Control Testing,External Lab Services,Quality Assurance Expense,45000,Other
+TRX134,02/12/25,Insecticide Sales - MINECTO Technology,Various Markets,Sales of Products,145000,Other
+TRX135,05/12/25,Packaging Materials - Drums & IBCs,Industrial Packaging Corp,Packaging Materials Expense,67000,Other
+TRX136,08/12/25,Electricity - Year-End Production,Utility Companies,Utilities Expense,72000,Electricity
+TRX137,10/12/25,Herbicide Sales - LUMAX Products,North American Dealers,Sales of Products,167000,Other
+TRX138,12/12/25,Wastewater Discharge Treatment,Environmental Solutions,Waste Disposal Expense,18900,Other
+TRX139,15/12/25,Seeds Sales - Vegetable Seeds Year-End,Global Distributors,Sales of Products,234000,Other
+TRX140,18/12/25,Natural Gas - Winter Peak,Multiple Suppliers,Utilities Expense,58000,Heating
+TRX141,20/12/25,Employee Benefits Administration,Benefits Provider,HR Services Expense,89000,Other
+TRX142,22/12/25,Fungicide Sales - PRIORI Range,Asian Pacific Region,Sales of Products,189000,Other
+TRX143,25/12/25,Water Supply - Final Quarter,Water Utilities,Utilities Expense,13500,Water
+TRX144,28/12/25,Employee Salaries - December,Payroll Department,Salaries Expense,310000,Other
+TRX145,30/12/25,Year-End Waste Disposal,Comprehensive Waste Services,Waste Disposal Expense,23000,Waste Disposal
+TRX146,31/12/25,Royalty Income - Trait Licenses,Licensee Companies,Royalty Income,28000,Other
+TRX147,31/12/25,Professional Solutions Sales - Annual,Pest Management Distributors,Sales of Products,54000,Other
+TRX148,31/12/25,Year-End Equipment Maintenance,Maintenance Contractors,Maintenance Expense,45000,Other

@@ -39,26 +39,6 @@ Water supply invoice,water
 Water usage - Industrial,water
 Water service charges,water
 Water Bill - Warehouse,water
-Invoice #45-A Agricultural diesel,other
-Payment for legal services,other
-Purchase Ammonium Nitrate 10000tons,other
-Tractor T-100 Maintenance,other
-Invoice #88-B Diesel fuel,other
-Office stationery purchase,other
-Seed purchase - Wheat variety A,other
-Pesticide purchase - Herbicide XL,other
-Monthly salary payment,other
-Insurance premium - Equipment,other
-Fertilizer - Potassium mix,other
-Harvester maintenance service,other
-Accounting software subscription,other
-Seed purchase - Corn hybrid B,other
-Telephone and internet services,other
-Fungicide treatment supplies,other
-Warehouse rent payment,other
-Irrigation system repair,other
-Tax consulting services,other
-Vehicle insurance premium,other
 Electricity costs - Building A,electricity
 Power bill - Office complex,electricity
 Electric utility - Monthly charge,electricity
@@ -99,26 +79,6 @@ Water consumption - Plant,water
 Water service - Industrial site,water
 Water supply payment,water
 Water Bill - Cooling system,water
-Office cleaning services,other
-Fertilizer - Nitrogen compound,other
-Packaging materials purchase,other
-Tractor tire replacement,other
-Laboratory soil testing,other
-Grain storage facility maintenance,other
-Pesticide purchase - Insecticide Pro,other
-Office supplies and printer toner,other
-Property tax payment,other
-Seed purchase - Soybean premium,other
-Temporary labor - Planting season,other
-Fertilizer - Phosphate blend,other
-Equipment transport services,other
-Combine harvester annual service,other
-Crop insurance premium,other
-Safety equipment and workwear,other
-Bank service charges,other
-Pesticide purchase - Weed control,other
-Packaging tape and boxes,other
-Vehicle fleet maintenance,other
 Electric bill - Administration,electricity
 Power invoice - Production,electricity
 Electricity charges - Plant,electricity
@@ -159,26 +119,6 @@ Water charges - Plant operations,water
 Water consumption - Office,water
 Water service payment - Monthly,water
 Water Bill - Equipment cooling,water
-Legal consultation - Contracts,other
-Fertilizer - Micronutrient mix,other
-Temporary labor - Harvest season,other
-Seed treatment chemicals,other
-Transport fuel cards top-up,other
-Grain dryer maintenance,other
-Marketing and advertising,other
-Office furniture replacement,other
-Fuel purchase - Diesel,other
-Machinery repair services,other
-Building maintenance,other
-Computer equipment purchase,other
-Professional consulting fees,other
-Annual insurance renewal,other
-Pest control services,other
-Waste disposal services,other
-Security system maintenance,other
-Printer lease payment,other
-Janitorial supplies,other
-Fire extinguisher inspection,other
 Electricity Bill - Greenhouse,electricity
 Power charges - Facility management,electricity
 Electric service - Industrial site,electricity
@@ -219,26 +159,6 @@ Water utility charges - Monthly,water
 Water consumption - Manufacturing,water
 Water service invoice - Facility,water
 Water charges - Distribution center,water
-HVAC system maintenance,other
-Plumbing repairs,other
-Paint and hardware supplies,other
-Landscaping services,other
-Snow removal services,other
-Window cleaning,other
-Carpet cleaning services,other
-Pest inspection,other
-Roof maintenance,other
-Door repair services,other
-Lock replacement,other
-Signage installation,other
-Parking lot maintenance,other
-Fence repair,other
-Lighting fixture replacement,other
-Flooring repairs,other
-Elevator maintenance,other
-Sprinkler system repair,other
-IT support services,other
-Software licensing fees,other
 Power bill - Storage warehouse,electricity
 Electricity charges - Facility A,electricity
 Monthly energy charges,electricity
@@ -279,26 +199,6 @@ Water consumption invoice - Factory,water
 Water service payment - Operations,water
 Water charges - Office complex,water
 Water Bill - Fire suppression system,water
-Cloud storage subscription,other
-Network maintenance,other
-Hardware upgrade costs,other
-Cybersecurity services,other
-Database management fees,other
-Email hosting services,other
-Domain registration,other
-SSL certificate renewal,other
-Backup services,other
-Video conferencing subscription,other
-Project management software,other
-CRM system subscription,other
-Antivirus software license,other
-Web hosting fees,other
-Technical training courses,other
-IT consulting services,other
-Server maintenance,other
-VPN service subscription,other
-Employee training programs,other
-Health and safety equipment,other
 Electric power bill - Main office,electricity
 Electricity charges - Workshop B,electricity
 Monthly power invoice - Factory,electricity
@@ -339,26 +239,6 @@ Water consumption - Warehouse site,water
 Water service - Processing operations,water
 Water charges - Industrial operations,water
 Monthly water bill - Production,water
-First aid supplies,other
-Uniforms and protective gear,other
-Employee wellness program,other
-Staff recognition awards,other
-Team building activities,other
-Professional development courses,other
-Industry conference fees,other
-Trade show participation,other
-Business travel expenses,other
-Hotel accommodations,other
-Meal reimbursements,other
-Transportation costs,other
-Mileage reimbursement,other
-Parking fees,other
-Toll road charges,other
-Rental car expenses,other
-Flight tickets,other
-Taxi and ride-sharing,other
-Office rent payment,other
-Property lease,other
 Electricity Bill - Maintenance shop,electricity
 Power invoice - Facility operations,electricity
 Monthly electric bill - Plant,electricity
@@ -399,26 +279,6 @@ Water utility invoice - Processing,water
 Water service payment - Factory,water
 Water charges - Manufacturing facility,water
 Water Bill - Wash stations,water
-Equipment rental,other
-Vehicle lease payment,other
-Forklift rental,other
-Generator rental,other
-Scaffolding rental,other
-Tool rental,other
-Storage unit rental,other
-Container rental,other
-Trailer rental,other
-Conference room rental,other
-Event space rental,other
-Temporary office rental,other
-Parking space lease,other
-Land lease payment,other
-Billboard rental,other
-Display booth rental,other
-Audio equipment rental,other
-Catering services,other
-Legal filing fees,other
-Patent application fees,other
 Power charges - Industrial facility,electricity
 Electricity Bill - Quality control lab,electricity
 Monthly electricity invoice - Warehouse,electricity
@@ -459,26 +319,6 @@ Water consumption invoice - Processing,water
 Water service - Distribution facility,water
 Water charges - Warehouse facility,water
 Monthly water payment - Operations,water
-Trademark registration,other
-Notary services,other
-Document translation,other
-Courier services,other
-Shipping and freight,other
-Customs clearance fees,other
-Import duties,other
-Export documentation,other
-Logistics services,other
-Warehousing fees,other
-Inventory management,other
-Quality control inspection,other
-Product testing services,other
-Certification fees,other
-Compliance auditing,other
-Environmental assessment,other
-Safety inspection,other
-Equipment calibration,other
-Advertising campaign,other
-Social media marketing,other
 Electric power charges - Warehouse,electricity
 Electricity Bill - Research facility,electricity
 Monthly power bill - Operations,electricity
@@ -519,26 +359,6 @@ Water consumption - Office facility,water
 Water utility charges - Manufacturing,water
 Water service - Processing center,water
 Water charges - Distribution operations,water
-Print advertising,other
-Radio advertising,other
-Television commercial,other
-Online advertising,other
-Billboard advertising,other
-Promotional materials,other
-Brochure printing,other
-Business card printing,other
-Catalog production,other
-Website development,other
-SEO services,other
-Content creation,other
-Graphic design services,other
-Photography services,other
-Video production,other
-Market research,other
-Customer survey,other
-Brand consulting,other
-Medical services,other
-Health screening,other
 Power bill - Office operations,electricity
 Electricity charges - Production facility,electricity
 Monthly electric service - Warehouse,electricity
@@ -579,26 +399,6 @@ Water service - Industrial facility,water
 Water charges - Warehouse district,water
 Monthly water payment - Manufacturing,water
 Water Bill - Spray systems,water
-Occupational health assessment,other
-Drug testing services,other
-Employee physical exams,other
-Vaccination program,other
-Mental health services,other
-Physiotherapy services,other
-Dental services,other
-Vision care services,other
-Hearing tests,other
-Ergonomic assessment,other
-Workplace wellness program,other
-Gym membership,other
-Nutrition counseling,other
-Stress management workshop,other
-Health insurance premium,other
-Life insurance premium,other
-Disability insurance,other
-Workers compensation insurance,other
-Accounting services,other
-Bookkeeping services,other
 Electric power invoice - Manufacturing,electricity
 Electricity Bill - Receiving area,electricity
 Monthly energy bill - Factory operations,electricity
@@ -639,26 +439,6 @@ Water consumption charges - Processing,water
 Water utility invoice - Factory,water
 Water service - Production warehouse,water
 Water charges - Operations facility,water
-Payroll processing,other
-Tax preparation,other
-Financial auditing,other
-Budget consulting,other
-Financial planning,other
-Investment advisory,other
-Credit check services,other
-Collection agency fees,other
-Bank loan interest,other
-Credit card processing fees,other
-Merchant services,other
-Wire transfer fees,other
-Currency exchange fees,other
-Check printing,other
-Cashier check fees,other
-Safe deposit box,other
-Treasury services,other
-Financial software,other
-Recruitment agency fees,other
-Job posting fees,other
 Electricity charges - Factory floor,electricity
 Power invoice - Warehouse operations,electricity
 Monthly electric bill - Production,electricity
@@ -699,26 +479,6 @@ Water service - Warehouse operations,water
 Water charges - Industrial warehouse,water
 Monthly water bill - Factory,water
 Water Bill - Floor cleaning,water
-Background check services,other
-Interview expenses,other
-Relocation expenses,other
-Signing bonus,other
-Referral bonus,other
-Performance bonus,other
-Holiday bonus,other
-Overtime payment,other
-Commission payment,other
-Profit sharing,other
-Retirement contribution,other
-Severance payment,other
-Exit interview services,other
-Outplacement services,other
-HR consulting,other
-Employee handbook printing,other
-Personnel file management,other
-Time tracking software,other
-Cleaning supplies,other
-Disinfectants and sanitizers,other
 Power charges - Processing plant,electricity
 Electricity Bill - Conference room,electricity
 Monthly power bill - Factory operations,electricity
@@ -759,26 +519,6 @@ Water consumption charges - Warehouse,water
 Water utility invoice - Manufacturing,water
 Water service - Production district,water
 Water charges - Processing operations,water
-Paper products,other
-Trash bags,other
-Recycling services,other
-Waste management,other
-Hazardous waste disposal,other
-Shredding services,other
-Document storage,other
-Records management,other
-Archive services,other
-Microfilm services,other
-Scanning services,other
-Data entry services,other
-Transcription services,other
-Translation services,other
-Interpretation services,other
-Proofreading services,other
-Editing services,other
-Writing services,other
-Technical manuals,other
-Industry publications,other
 Electric power bill - Production site,electricity
 Electricity charges - Operations warehouse,electricity
 Monthly power invoice - Distribution,electricity

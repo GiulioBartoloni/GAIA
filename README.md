@@ -1,4 +1,4 @@
-# GAIA
+![alt text](meta/GaiaLogo.png)
 
 # Project folder structure
 ```
