@@ -1,4 +1,4 @@
-Unit,ConversionRate,TargetUnit
+Unit,Conversion_rate,Target_unit
 mg,0.000001,kg
 g,0.001,kg
 kg,1,kg

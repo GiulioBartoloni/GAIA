@@ -1,0 +1,149 @@
+,text,predicted_label,confidence,original_prediction
+0,herbicide product sales - europe region,Other,0.95938474,Other
+1,fungicide product sales - north america,Other,0.9827125,Other
+2,seeds product sales - latin america,Other,0.9827125,Other
+3,electricity supply - basel site,Electricity,0.9992601,Electricity
+4,natural gas supply - manufacturing,Heating,0.9993999,Heating
+5,water supply - monthey site,Water,0.99619377,Water
+6,chemical raw materials - active ingredients,Other,0.95938474,Other
+7,hazardous waste disposal,Waste Disposal,0.9966288,Waste Disposal
+8,seed purchase - corn hybrid,Other,0.95938474,Other
+9,packaging materials - bottles & containers,Other,0.95938474,Other
+10,employee salaries - january,Other,0.95938474,Other
+11,non-hazardous waste removal,Waste Disposal,0.9939135,Waste Disposal
+12,insecticide product sales - asia pacific,Other,0.95938474,Other
+13,selective herbicide sales - emea,Other,0.95938474,Other
+14,electricity supply - greensboro site usa,Electricity,0.98683304,Electricity
+15,laboratory equipment purchase,Other,0.95938474,Other
+16,intermediate chemicals purchase,Other,0.95938474,Other
+17,industrial wastewater treatment,Other,0.95938474,Other
+18,fungicide sales - miravis technology,Other,0.95938474,Other
+19,water supply - uk sites,Water,0.99619377,Water
+20,freight & logistics - international shipment,Other,0.95938474,Other
+21,seed treatment products sales,Other,0.95938474,Other
+22,it infrastructure services,Other,0.95938474,Other
+23,employee salaries - february,Other,0.95938474,Other
+24,steam supply - manufacturing plant,Heating,0.96435434,Heating
+25,insecticide sales - plinazolin technology,Other,0.95938474,Other
+26,chemical waste incineration,Other,0.65556216,Waste Disposal
+27,seeds sales - soybean varieties,Other,0.95938474,Other
+28,electricity - jealott&apos;s hill research,Electricity,0.97687215,Electricity
+29,formulation tolling services,Other,0.95938474,Other
+30,natural gas - monthey plant,Heating,0.9440777,Heating
+31,legal & compliance services,Other,0.95938474,Other
+32,royalty & license income,Other,0.95938474,Other
+33,herbicide sales - touchdown products,Other,0.95938474,Other
+34,biomass fuel purchase,Heating,0.955165,Heating
+35,employee salaries - march,Other,0.95938474,Other
+36,water treatment & discharge,Other,0.5833524,Other
+37,fungicide sales - adepidyn technology,Other,0.95938474,Other
+38,agricultural chemicals purchase,Other,0.95938474,Other
+39,recycling services - non-hazardous,Waste Disposal,0.99287146,Waste Disposal
+40,seeds sales - corn hybrids north america,Other,0.9827125,Other
+41,electricity - são paulo operations,Electricity,0.97687215,Electricity
+42,r&d laboratory supplies,Other,0.95938474,Other
+43,property insurance premium,Other,0.95938474,Other
+44,seedcare product sales - vibrance,Other,0.95938474,Other
+45,hazardous chemical waste disposal,Waste Disposal,0.9966288,Waste Disposal
+46,marketing campaign - digital,Other,0.95938474,Other
+47,employee salaries - april,Other,0.95938474,Other
+48,natural gas - chinese operations,Heating,0.91462374,Heating
+49,herbicide sales - european markets,Other,0.95938474,Other
+50,packaging materials - seed bags,Other,0.95938474,Other
+51,water supply - multiple sites,Water,0.99619377,Water
+52,active ingredient manufacturing,Other,0.95938474,Other
+53,electricity - research centers,Electricity,0.97687215,Electricity
+54,insecticide sales - actara products,Other,0.95938474,Other
+55,environmental compliance consulting,Other,0.95938474,Other
+56,seeds sales - vegetable seeds,Other,0.95938474,Other
+57,wastewater treatment services,Other,0.95938474,Other
+58,it software licenses,Other,0.95938474,Other
+59,employee salaries - may,Other,0.95938474,Other
+60,solar energy installation,Other,0.95938474,Other
+61,fungicide sales - score products,Other,0.95938474,Other
+62,chemical intermediates purchase,Other,0.95938474,Other
+63,electricity - manufacturing plants,Electricity,0.97687215,Electricity
+64,freight - ocean container shipment,Other,0.95938474,Other
+65,seeds sales - sunflower varieties,Other,0.95938474,Other
+66,hazardous waste treatment,Waste Disposal,0.9939135,Waste Disposal
+67,natural gas supply,Heating,0.99894005,Heating
+68,herbicide sales - axial technology,Other,0.95938474,Other
+69,training & development programs,Other,0.95938474,Other
+70,water consumption - summer peak,Water,0.99833435,Water
+71,employee salaries - june,Other,0.95938474,Other
+72,equipment maintenance services,Other,0.95938474,Other
+73,insecticide sales - engeo products,Other,0.95938474,Other
+74,biologicals product sales,Other,0.95938474,Other
+75,electricity - peak summer demand,Electricity,0.97687215,Electricity
+76,seed production contracts,Other,0.95938474,Other
+77,waste oil disposal,Waste Disposal,0.9939135,Waste Disposal
+78,fungicide sales - elatus range,Other,0.95938474,Other
+79,professional solutions sales - turf products,Other,0.95938474,Other
+80,natural gas - reduced summer usage,Heating,0.93908757,Heating
+81,recruitment services,Other,0.95938474,Other
+82,laboratory analysis services,Other,0.95938474,Other
+83,employee salaries - july,Other,0.95938474,Other
+84,water supply - summer irrigation,Water,0.99619377,Water
+85,seeds sales - corn seeds latin america,Other,0.9827125,Other
+86,herbicide sales - dual gold,Other,0.95938474,Other
+87,electricity - production facilities,Electricity,0.97687215,Electricity
+88,specialty chemicals purchase,Other,0.95938474,Other
+89,industrial waste collection,Waste Disposal,0.9939135,Waste Disposal
+90,seedcare sales - fortenza technology,Other,0.95938474,Other
+91,audit & assurance services,Other,0.95938474,Other
+92,natural gas supply,Heating,0.99894005,Heating
+93,flowers business sales,Other,0.95938474,Other
+94,transport & distribution,Other,0.95938474,Other
+95,employee salaries - august,Other,0.95938474,Other
+96,water treatment chemicals,Other,0.5833524,Other
+97,insecticide sales - karate products,Other,0.95938474,Other
+98,packaging materials - large format,Other,0.95938474,Other
+99,electricity - autumn transition,Electricity,0.97687215,Electricity
+100,herbicide sales - gramoxone,Other,0.95938474,Other
+101,hazardous waste processing,Waste Disposal,0.9939135,Waste Disposal
+102,seeds sales - diverse field crops,Other,0.95938474,Other
+103,natural gas - increased production,Heating,0.91462374,Heating
+104,community investment programs,Other,0.95938474,Other
+105,fungicide sales - revus technology,Other,0.95938474,Other
+106,water supply - multiple facilities,Water,0.99619377,Water
+107,employee salaries - september,Other,0.95938474,Other
+108,safety equipment & ppe,Other,0.95938474,Other
+109,herbicide sales - halex products,Other,0.95938474,Other
+110,formulation ingredients,Other,0.95938474,Other
+111,electricity - fall season,Electricity,0.97687215,Electricity
+112,waste solvent recovery,Other,0.65556216,Waste Disposal
+113,insecticide sales - vertimec range,Other,0.95938474,Other
+114,natural gas - heating season start,Heating,0.99610573,Heating
+115,seeds sales - winter wheat,Other,0.95938474,Other
+116,telecommunications services,Other,0.95938474,Other
+117,manufacturing equipment upgrade,Other,0.95938474,Other
+118,water supply & treatment,Water,0.99619377,Water
+119,employee salaries - october,Other,0.95938474,Other
+120,chemical storage tank rental,Other,0.95938474,Other
+121,fungicide sales - amistar technology,Other,0.95938474,Other
+122,active ingredients import,Other,0.95938474,Other
+123,electricity - increased heating,Other,0.5527182,Electricity
+124,herbicide sales - calaris products,Other,0.95938474,Other
+125,hazardous material transport,Other,0.95938474,Other
+126,seeds sales - rapeseed varieties,Other,0.95938474,Other
+127,natural gas - peak heating,Heating,0.99610573,Heating
+128,non-hazardous waste recycling,Waste Disposal,0.9966288,Waste Disposal
+129,seedcare sales - cruiser technology,Other,0.95938474,Other
+130,water consumption - winter operations,Water,0.9988933,Water
+131,employee salaries - november,Other,0.95938474,Other
+132,quality control testing,Other,0.95938474,Other
+133,insecticide sales - minecto technology,Other,0.95938474,Other
+134,packaging materials - drums & ibcs,Other,0.95938474,Other
+135,electricity - year-end production,Electricity,0.97687215,Electricity
+136,herbicide sales - lumax products,Other,0.95938474,Other
+137,wastewater discharge treatment,Other,0.95938474,Other
+138,seeds sales - vegetable seeds year-end,Other,0.95938474,Other
+139,natural gas - winter peak,Heating,0.9440777,Heating
+140,employee benefits administration,Other,0.95938474,Other
+141,fungicide sales - priori range,Other,0.95938474,Other
+142,water supply - final quarter,Water,0.99619377,Water
+143,employee salaries - december,Other,0.95938474,Other
+144,year-end waste disposal,Waste Disposal,0.9966288,Waste Disposal
+145,royalty income - trait licenses,Other,0.95938474,Other
+146,professional solutions sales - annual,Other,0.95938474,Other
+147,year-end equipment maintenance,Other,0.95938474,Other
