@@ -9,13 +9,14 @@ from typing import List
 
 
 PROJECT_DIR = Path(__file__).parent.parent
-INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'Syngenta_2023_Simulated_Cash_Flow_Statement.xlsx'
+INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'Syngenta_2023_Cash_Flow_Statement_Electric_Adjusted.xlsx'
 UNITS_OF_MEASUREMENT_DATASET_PATH = PROJECT_DIR / 'data' / 'parser' / 'units_of_measurement.csv'
 CONVERSION_RATES_PATH = PROJECT_DIR / 'data'/ 'parser' / 'conversion_rates.csv'
 UNITS_OF_MEASUREMENT_VARIATIONS_PATH = PROJECT_DIR / 'data'/ 'parser' / 'units_of_measurement_variations.json'
 MODEL_PATH = PROJECT_DIR / 'models' / 'cash_flow_classifier.pkl'
 ESG_CONVERTION_RATES_PATH = PROJECT_DIR / 'data' / 'parser' / 'ESG_indicators_conversion_rates.csv'
 
+SCOPE_3_PERCENTAGE=0.973
 
 class NumberNotations(Enum):
     """
@@ -161,7 +162,7 @@ def main():
     cash_flow_dataset = standardize_units_of_measurement(cash_flow_dataset)
     
     # Only keep relevant columns
-    cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class']]
+    cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class','transaction_id']]
 
     # Get ESG indicators conversion rates and add info to dataset
     ESG_conversion_rates = pd.read_csv(ESG_CONVERTION_RATES_PATH)
@@ -174,7 +175,7 @@ def main():
     
     # Calculate total revenue as sum of sales of products
     revenue = cash_flow_dataset.loc[cash_flow_dataset['gl_account'] == 'sales of products']['amount_eur'].sum()
-        
+
     # Calculate total waste produced and waste intensity
     waste_disposal_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Waste Disposal'].copy()
     waste_disposal_dataframe['amount'] = waste_disposal_dataframe['amount_eur'] / waste_disposal_dataframe['cost_of_purchase']
@@ -190,17 +191,41 @@ def main():
     # Calculate total energy absorbed and energy intensity
     electricity_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
     electricity_bills_dataframe['amount'] = electricity_bills_dataframe['amount_eur'] / electricity_bills_dataframe['cost_of_purchase']
-    print(electricity_bills_dataframe['amount_eur'].abs().sum())
-    total_energy_absorbed = electricity_bills_dataframe['amount'].abs().sum()
-    print(total_energy_absorbed)
-    energy_intensity = round(total_energy_absorbed/revenue, 2)
+    total_energy_absorbed = electricity_bills_dataframe['amount'].abs().sum()*0.0000036
+    energy_intensity = round((total_energy_absorbed)/(revenue/1000000),2)
     
+    electricity_bills_dataframe[['transaction_id']].to_csv('a.csv')
+
+    # Calculate SCOPE 2 emissions
+    scope_2_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
+    scope_2_dataframe['amount'] = scope_2_dataframe['amount_eur'] / scope_2_dataframe['cost_of_purchase']
+    scope_2_dataframe['co2_eq_produced'] = scope_2_dataframe['amount'] * scope_2_dataframe['co2eq']
+    scope_2_co2eq = round(scope_2_dataframe['co2_eq_produced'].abs().sum()/1000000)
+
+    scope_1_3_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'].isin(['Other','Waste Disposal'])].copy()
+    scope_1_3_dataframe['co2_eq_produced'] = scope_1_3_dataframe['amount_eur'] / scope_1_3_dataframe['co2eq'].max()
+    print(scope_1_3_dataframe['co2eq'].max())
+    scope_1_3_co2eq = scope_1_3_dataframe['co2_eq_produced'].abs().sum()
+    print(f"{scope_1_3_dataframe['amount_eur'].abs().sum()} eur")
+
+    scope_1_co2eq = round((scope_1_3_co2eq*(1-SCOPE_3_PERCENTAGE))/1000000)
+    scope_3_co2eq = round((scope_1_3_co2eq*SCOPE_3_PERCENTAGE)/1000000)
+
+    total_ghg = scope_1_co2eq+scope_2_co2eq+scope_3_co2eq
+    ghg_emission_intensity = round(total_ghg/(revenue/100000),2)
+
     # print all calculated ESG indicators
     print("="*80)
     print("CALCULATED ESG INDICATORS\n")
-    print(F"WASTE INTENSITY: {waste_intensity}")
-    print(F"WATER INTENSITY: {water_intensity}")
-    print(F"ENERGY INTENSITY: {energy_intensity}")
+    print(f"SCOPE 1 GHG EMISSIONS: {scope_1_co2eq} 000s of tonnes")
+    print(f"SCOPE 2 GHG EMISSIONS: {scope_2_co2eq} 000s of tonnes")
+    print(f"SCOPE 3 GHG EMISSIONS: {scope_3_co2eq} 000s of tonnes")
+    print(f"TOTAL GHG EMISSIONS: {total_ghg} 000s of tonnes")
+    print(f"GHG EMISSION INTENSITY: {ghg_emission_intensity} 000s of tonnes")
+    print(f"TOTAL ENERGY ABSORBED: {round(total_energy_absorbed)} TJ")
+    print(f"ENERGY INTENSITY: {energy_intensity} TJ/sales")
+    print(f"WATER INTENSITY: {water_intensity} liters/sales")
+    print(f"WASTE INTENSITY: {waste_intensity} g/sales")
     print("="*80)
 
 
