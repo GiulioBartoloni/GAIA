@@ -8,7 +8,6 @@ from enum import Enum, auto
 from typing import List
 
 
-
 PROJECT_DIR = Path(__file__).parent.parent
 INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'new_test.xlsx'
 UNITS_OF_MEASUREMENT_DATASET_PATH = PROJECT_DIR / 'data' / 'parser' / 'units_of_measurement.csv'
@@ -16,6 +15,7 @@ CONVERSION_RATES_PATH = PROJECT_DIR / 'data'/ 'parser' / 'conversion_rates.csv'
 UNITS_OF_MEASUREMENT_VARIATIONS_PATH = PROJECT_DIR / 'data'/ 'parser' / 'units_of_measurement_variations.json'
 MODEL_PATH = PROJECT_DIR / 'models' / 'cash_flow_classifier.pkl'
 ESG_CONVERTION_RATES_PATH = PROJECT_DIR / 'data' / 'parser' / 'ESG_indicators_conversion_rates.csv'
+
 
 class NumberNotations(Enum):
     """
@@ -169,12 +169,34 @@ def main():
     ESG_conversion_rates.columns = ESG_conversion_rates.columns.str.lower()
     cash_flow_dataset = cash_flow_dataset.merge(ESG_conversion_rates, on='class')
     
-
+    # Calculate amounts with cost of purchase if not available from cash flow statement
     cash_flow_dataset['amount'] = cash_flow_dataset['amount'].fillna(cash_flow_dataset['amount_eur'] * cash_flow_dataset['cost_of_purchase'])
     cash_flow_dataset['unit'] = cash_flow_dataset['unit'].fillna(cash_flow_dataset['standard_unit_of_measure'])
     
+    # Calculate total revenue as sum of sales of products
     revenue = cash_flow_dataset.loc[cash_flow_dataset['gl_account'] == 'sales of products']['amount_eur'].sum()
-    print(revenue)
+    
+    # Calculate total waste produced and waste intensity
+    waste_disposal_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Waste Disposal'].copy()
+    waste_disposal_dataframe['amount'] = waste_disposal_dataframe['amount_eur'] / waste_disposal_dataframe['cost_of_purchase']
+    total_waste_produced = waste_disposal_dataframe['amount'].sum()
+    print(total_waste_produced)
+    waste_intensity = round(revenue/total_waste_produced, 2)
+    
+    # Calculate total water consumed and water intensity
+    water_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Water'].copy()
+    water_bills_dataframe['amount'] = water_bills_dataframe['amount_eur'] / water_bills_dataframe['cost_of_purchase']
+    total_water_consumed = water_bills_dataframe['amount'].sum()
+    print(total_water_consumed)
+    water_intensity = round(revenue/total_water_consumed, 2)
+    
+    # print all calculated ESG indicators
+    print("="*80)
+    print("CALCULATED ESG INDICATORS\n")
+    print(F"WASTE INTENSITY: {waste_intensity}")
+    print(F"WATER INTENSITY: {water_intensity}")
+    print("="*80)
+
 
 if __name__ == "__main__":
     main()
