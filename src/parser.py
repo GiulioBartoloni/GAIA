@@ -1,15 +1,23 @@
+"""parser.py
+
+This module parses the cash flow statement.
+
+It classifies all the entries and calculates ESG indicators.
+"""
+
 from pathlib import Path
-import pickle
-import pandas as pd
-from pandas.api.types import is_numeric_dtype
 import re
 import json
 from enum import Enum, auto
 from typing import List
 
+import pickle
+import pandas as pd
+from pandas.api.types import is_numeric_dtype
+
 
 PROJECT_DIR = Path(__file__).parent.parent
-INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'Syngenta_2023_Cash_Flow_Statement_Electric_Adjusted.xlsx'
+INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'Syngenta_2023_Cash_Flow_Statement.xlsx'
 UNITS_OF_MEASUREMENT_DATASET_PATH = PROJECT_DIR / 'data' / 'parser' / 'units_of_measurement.csv'
 CONVERSION_RATES_PATH = PROJECT_DIR / 'data'/ 'parser' / 'conversion_rates.csv'
 UNITS_OF_MEASUREMENT_VARIATIONS_PATH = PROJECT_DIR / 'data'/ 'parser' / 'units_of_measurement_variations.json'
@@ -18,17 +26,18 @@ ESG_CONVERTION_RATES_PATH = PROJECT_DIR / 'data' / 'parser' / 'ESG_indicators_co
 
 SCOPE_3_PERCENTAGE=0.973
 
+
 class NumberNotations(Enum):
     """
     This class is an enum for supported number format notations.
     """
-    
+
     EU = auto()
     US = auto()
 
 
 def predict_classes(texts:List)->pd.DataFrame:
-    # Load the model
+    # Load the model and extract elements
     with open(MODEL_PATH, 'rb') as f:
         pipeline = pickle.load(f)
 
@@ -37,7 +46,7 @@ def predict_classes(texts:List)->pd.DataFrame:
     label_encoder = pipeline['label_encoder']
     confidence_threshold = pipeline['confidence_threshold']
     fallback_label = pipeline['fallback_label']
-    
+
     # Transform text to features
     X = vectorizer.transform(texts)
 
@@ -162,7 +171,7 @@ def main():
     cash_flow_dataset = standardize_units_of_measurement(cash_flow_dataset)
     
     # Only keep relevant columns
-    cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class','transaction_id']]
+    cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class']]
 
     # Get ESG indicators conversion rates and add info to dataset
     ESG_conversion_rates = pd.read_csv(ESG_CONVERTION_RATES_PATH)
@@ -176,43 +185,46 @@ def main():
     # Calculate total revenue as sum of sales of products
     revenue = cash_flow_dataset.loc[cash_flow_dataset['gl_account'] == 'sales of products']['amount_eur'].sum()
 
+
     # Calculate total waste produced and waste intensity
     waste_disposal_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Waste Disposal'].copy()
     waste_disposal_dataframe['amount'] = waste_disposal_dataframe['amount_eur'] / waste_disposal_dataframe['cost_of_purchase']
     total_waste_produced = waste_disposal_dataframe['amount'].abs().sum()
-    waste_intensity = round((total_waste_produced*1000)/revenue, 2)
+    waste_intensity = round((total_waste_produced * 1000) / revenue, 2)
     
+
     # Calculate total water consumed and water intensity
     water_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Water'].copy()
     water_bills_dataframe['amount'] = water_bills_dataframe['amount_eur'] / water_bills_dataframe['cost_of_purchase']
     total_water_consumed = water_bills_dataframe['amount'].abs().sum()
     water_intensity = round(total_water_consumed/revenue, 2)
     
+
     # Calculate total energy absorbed and energy intensity
     electricity_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
     electricity_bills_dataframe['amount'] = electricity_bills_dataframe['amount_eur'] / electricity_bills_dataframe['cost_of_purchase']
-    total_energy_absorbed = electricity_bills_dataframe['amount'].abs().sum()*0.0000036
-    energy_intensity = round((total_energy_absorbed)/(revenue/1000000),2)
-    
-    electricity_bills_dataframe[['transaction_id']].to_csv('a.csv')
+    total_energy_absorbed = electricity_bills_dataframe['amount'].abs().sum() * 0.0000036
+    energy_intensity = round((total_energy_absorbed) / (revenue / 1000000),2)
+
 
     # Calculate SCOPE 2 emissions
     scope_2_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
     scope_2_dataframe['amount'] = scope_2_dataframe['amount_eur'] / scope_2_dataframe['cost_of_purchase']
     scope_2_dataframe['co2_eq_produced'] = scope_2_dataframe['amount'] * scope_2_dataframe['co2eq']
-    scope_2_co2eq = round(scope_2_dataframe['co2_eq_produced'].abs().sum()/1000000)
+    scope_2_co2eq = round(scope_2_dataframe['co2_eq_produced'].abs().sum() / 1000000)
 
+
+    # Calculate scope 1 and 3 emissions
     scope_1_3_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'].isin(['Other','Waste Disposal'])].copy()
     scope_1_3_dataframe['co2_eq_produced'] = scope_1_3_dataframe['amount_eur'] / scope_1_3_dataframe['co2eq'].max()
-    print(scope_1_3_dataframe['co2eq'].max())
     scope_1_3_co2eq = scope_1_3_dataframe['co2_eq_produced'].abs().sum()
-    print(f"{scope_1_3_dataframe['amount_eur'].abs().sum()} eur")
 
-    scope_1_co2eq = round((scope_1_3_co2eq*(1-SCOPE_3_PERCENTAGE))/1000000)
-    scope_3_co2eq = round((scope_1_3_co2eq*SCOPE_3_PERCENTAGE)/1000000)
+    # Divide previous calculation into scope 1 and scope 3
+    scope_1_co2eq = round((scope_1_3_co2eq*(1-SCOPE_3_PERCENTAGE)) / 1000000)
+    scope_3_co2eq = round((scope_1_3_co2eq*SCOPE_3_PERCENTAGE) / 1000000)
+    total_ghg = scope_1_co2eq + scope_2_co2eq + scope_3_co2eq
+    ghg_emission_intensity = round(total_ghg/(revenue / 100000),2)
 
-    total_ghg = scope_1_co2eq+scope_2_co2eq+scope_3_co2eq
-    ghg_emission_intensity = round(total_ghg/(revenue/100000),2)
 
     # print all calculated ESG indicators
     print("="*80)

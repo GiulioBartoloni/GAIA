@@ -3,26 +3,30 @@
 # Project folder structure
 ```
 GAIA
-├── README.md
 ├── architecture_documentation
 │   ├── components.md
 │   └── image.png
 ├── data
 │   ├── cash_flow_statements
-│   │   ├── input_dataset_v.1.xlsx
-│   │   └── synthetic_dataset.xlsx
-│   ├── conversion_rates.csv
-│   ├── units_of_measurement.csv
-│   ├── units_of_measurement_variations.json
-│   └── xgboost_test_data.csv
+│   │   └── Syngenta_2023_Cash_Flow_Statement.xlsx
+│   ├── parser
+│   │   ├── conversion_rates.csv
+│   │   ├── ESG_indicators_conversion_rates.csv
+│   │   ├── units_of_measurement.csv
+│   │   └── units_of_measurement_variations.json
+│   └── xgboost
+│       └── training_dataset.csv
 ├── meta
 │   ├── architecture.drawio
-│   └── architecture.png
+│   ├── architecture.png
+│   └── GaiaLogo.png
+├── models
+│   └── cash_flow_classifier.pkl
+├── README.md
 ├── requirements.txt
-├── src
-│   └── parser_demo.py
-├── classificator_test.ipynb
-└── parser.ipynb
+└── src
+    ├── classificator_training.py
+    └── parser.py
 ```
 The main files are:
 - `architecture_documentation`: contains info on the possible system architecture.
@@ -34,9 +38,8 @@ The main files are:
 
 # Instructions to run this code
 The main components are:
-- `src/classificator_test.ipynb`: this notebook contains the test done with XGBoost and TF-IDF vectorization for string classification.
-- `src/parser.ipynb`: this notebook contains the code for the _Cash Flow Statement_ parser.
-- `src/parser_demo.py`: this code is a streamlit app that uses the same logic in `src/parser.ipynb`, but with a prettier interface.
+- `src/classificator_training.py`: this script trains the XGBoost classifier using the training data.
+- `src/parser.py`: this script runs the parser to calculate ESG indicators from the given cash flow statement.
 
 
 Before running anything, you need to setup a python virtual environment and install required dependencies:
@@ -54,21 +57,21 @@ uv venv .venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
 ```
-Now we need to install the kernel to run notebooks:
+
+
+
+## Running Python scripts
+The first script you need to run in order to compute ESG indicators is `src/classificator_training`.
 ```
-python -m ipykernel install --user --name GAIA --display-name "GAIA venv"
+python src/classificator_training.py
 ```
-(_Reloading VS code window or restarting it may be necessary_)
+This will create a `.pkl` file in the `models` folder. It will be then used for classification.
 
-
-## Notebooks
-Both notebooks `parser.ipynb` and `classificator_test.ipynb` define macros at the beginning with file paths that can be customized if needed.
-
-Other than that, no additional info should be required.
-
-## Demo file
-This file cannot be run like a regular python file. The command required is:
-```bash
-streamlit run src/parser_demo.py
+Then you can run `src/parser.py`.
 ```
-With this default command, the app will be hosted on `localhost:8501`. The port and hostname can be customized, but for demo purposes it should be fine.
+python src/parser.py
+```
+
+You will get calculated ESG indicators as an output.
+
+To get more information on any of the functions, check out the docstrings or use the `help` command in a python instance.
