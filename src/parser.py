@@ -9,7 +9,7 @@ from typing import List
 
 
 PROJECT_DIR = Path(__file__).parent.parent
-INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'new_test.xlsx'
+INPUT_DATASET_PATH = PROJECT_DIR / 'data' / 'cash_flow_statements' / 'Syngenta_2023_Simulated_Cash_Flow_Statement.xlsx'
 UNITS_OF_MEASUREMENT_DATASET_PATH = PROJECT_DIR / 'data' / 'parser' / 'units_of_measurement.csv'
 CONVERSION_RATES_PATH = PROJECT_DIR / 'data'/ 'parser' / 'conversion_rates.csv'
 UNITS_OF_MEASUREMENT_VARIATIONS_PATH = PROJECT_DIR / 'data'/ 'parser' / 'units_of_measurement_variations.json'
@@ -159,8 +159,7 @@ def main():
     cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='amount')
     cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='amount_eur')
     cash_flow_dataset = standardize_units_of_measurement(cash_flow_dataset)
-
-
+    
     # Only keep relevant columns
     cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class']]
 
@@ -175,20 +174,18 @@ def main():
     
     # Calculate total revenue as sum of sales of products
     revenue = cash_flow_dataset.loc[cash_flow_dataset['gl_account'] == 'sales of products']['amount_eur'].sum()
-    
+        
     # Calculate total waste produced and waste intensity
     waste_disposal_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Waste Disposal'].copy()
     waste_disposal_dataframe['amount'] = waste_disposal_dataframe['amount_eur'] / waste_disposal_dataframe['cost_of_purchase']
-    total_waste_produced = waste_disposal_dataframe['amount'].sum()
-    print(total_waste_produced)
-    waste_intensity = round(revenue/total_waste_produced, 2)
+    total_waste_produced = waste_disposal_dataframe['amount'].abs().sum()
+    waste_intensity = round((total_waste_produced*1000)/revenue, 2)
     
     # Calculate total water consumed and water intensity
     water_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Water'].copy()
     water_bills_dataframe['amount'] = water_bills_dataframe['amount_eur'] / water_bills_dataframe['cost_of_purchase']
-    total_water_consumed = water_bills_dataframe['amount'].sum()
-    print(total_water_consumed)
-    water_intensity = round(revenue/total_water_consumed, 2)
+    total_water_consumed = water_bills_dataframe['amount'].abs().sum()
+    water_intensity = round(total_water_consumed/revenue, 2)
     
     # print all calculated ESG indicators
     print("="*80)
