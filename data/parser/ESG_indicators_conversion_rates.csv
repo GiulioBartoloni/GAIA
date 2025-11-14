@@ -1,5 +1,5 @@
 Class,Standard_unit_of_measure,Cost_of_purchase,CO2eq
-Electricity,kwh,0.28,6.3
+Electricity,kwh,0.0045,6.3
 Heating,m3,1.1,2.05
 Water,l,0.00034,
 Waste Disposal,kg,0.069,

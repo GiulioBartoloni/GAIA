@@ -187,11 +187,20 @@ def main():
     total_water_consumed = water_bills_dataframe['amount'].abs().sum()
     water_intensity = round(total_water_consumed/revenue, 2)
     
+    # Calculate total energy absorbed and energy intensity
+    electricity_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
+    electricity_bills_dataframe['amount'] = electricity_bills_dataframe['amount_eur'] / electricity_bills_dataframe['cost_of_purchase']
+    print(electricity_bills_dataframe['amount_eur'].abs().sum())
+    total_energy_absorbed = electricity_bills_dataframe['amount'].abs().sum()
+    print(total_energy_absorbed)
+    energy_intensity = round(total_energy_absorbed/revenue, 2)
+    
     # print all calculated ESG indicators
     print("="*80)
     print("CALCULATED ESG INDICATORS\n")
     print(F"WASTE INTENSITY: {waste_intensity}")
     print(F"WATER INTENSITY: {water_intensity}")
+    print(F"ENERGY INTENSITY: {energy_intensity}")
     print("="*80)
 
 
