@@ -10,11 +10,11 @@ Usage:
     python classificator_training.py
 """
 
-import pandas as pd
 import pickle
 import os
 from pathlib import Path
 
+import pandas as pd
 import xgboost as xgb
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
@@ -70,7 +70,7 @@ def main():
         ngram_range=(1, 2), # Considers both unigrams and bigrams
         min_df=1    # unigrams/bigrams must appear at least once
     )
-    X = vectorizer.fit_transform(texts)
+    x = vectorizer.fit_transform(texts)
 
     # Train XGBoost model
     model = xgb.XGBClassifier(
@@ -79,7 +79,7 @@ def main():
         learning_rate=0.1,
         n_estimators=100
     )
-    model.fit(X, labels_encoded)
+    model.fit(x, labels_encoded)
 
     # Save model data
     pipeline = {
@@ -100,10 +100,10 @@ def main():
 
         print(f"Model successfully saved to {MODEL_OUTPUT_PATH}.")
 
-    except PermissionError:
-        raise PermissionError(f"No permission to write to {MODEL_OUTPUT_PATH}.")
-    except OSError as e:
-        raise OSError(f"Failed to save model: {e}.")
+    except PermissionError as error:
+        raise PermissionError(f"No permission to write to {MODEL_OUTPUT_PATH}.") from error
+    except OSError as error:
+        raise OSError(f"Failed to save model: {error}.") from error
 
 
 if __name__ == "__main__":

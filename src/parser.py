@@ -36,7 +36,15 @@ class NumberNotations(Enum):
     US = auto()
 
 
-def predict_classes(texts:List)->pd.DataFrame:
+def predict_classes(texts:List)->List:
+    """Predict classes from the description field.
+    
+    Args:
+        texts: List containing descriptions.
+
+    Returns:
+        List containing predicted labels.
+    """
     # Load the model and extract elements
     with open(MODEL_PATH, 'rb') as f:
         pipeline = pickle.load(f)
@@ -48,11 +56,11 @@ def predict_classes(texts:List)->pd.DataFrame:
     fallback_label = pipeline['fallback_label']
 
     # Transform text to features
-    X = vectorizer.transform(texts)
+    x = vectorizer.transform(texts)
 
     # Get predictions and probabilities
-    predictions = model.predict(X)
-    probabilities = model.predict_proba(X)
+    predictions = model.predict(x)
+    probabilities = model.predict_proba(x)
 
     # Get confidence scores
     confidence_scores = probabilities.max(axis=1)
@@ -63,11 +71,8 @@ def predict_classes(texts:List)->pd.DataFrame:
     # Apply confidence threshold and fallback
     final_predictions = []
     for label, confidence in zip(predicted_labels, confidence_scores):
-        if confidence < confidence_threshold:
-            final_predictions.append(fallback_label)
-        else:
-            final_predictions.append(label)
-    
+        final_predictions.append(fallback_label if confidence < confidence_threshold else label)
+
     return final_predictions
 
 
@@ -108,7 +113,7 @@ def parse_amount_field(dataset:pd.DataFrame, field:str, number_format:NumberNota
     else:
         dataset[field] = dataset[field].str.replace('.', '', regex=False)
         dataset[field] = dataset[field].str.replace(',', '.', regex=False)
-    
+
     dataset[field] = pd.to_numeric(dataset[field], errors='coerce')
     return dataset
 
@@ -147,7 +152,7 @@ def extract_amount_from_description(dataframe: pd.DataFrame)->pd.DataFrame:
     # Import units of measurements and extract amounts if present in the description field
     units_of_measurement_dataset = pd.read_csv(UNITS_OF_MEASUREMENT_DATASET_PATH)
     units_of_measurement_dataset.columns = units_of_measurement_dataset.columns.str.lower()
-    units_of_measurement_dataset = units_of_measurement_dataset.map(lambda s: s.lower() if type(s) == str else s)
+    units_of_measurement_dataset = units_of_measurement_dataset.map(lambda s: s.lower() if isinstance(s, str) else s)
 
     all_units='|'.join(list(units_of_measurement_dataset['unit']))
     pattern = rf'([\d.,]+)\s*({all_units})\b'
@@ -159,6 +164,26 @@ def extract_amount_from_description(dataframe: pd.DataFrame)->pd.DataFrame:
     dataframe = parse_amount_field(dataset=dataframe, field='amount')
     dataframe = parse_amount_field(dataset=dataframe, field='amount_eur')
     dataframe = standardize_units_of_measurement(dataframe)
+
+    return dataframe
+
+
+def add_amounts_from_cost(dataframe: pd.DataFrame)->pd.DataFrame:
+    """Add amount where missing, calculating it from the cost ot purchase.
+
+    Args:
+        dataframe: DataFrame containing the cash flow statement.
+
+    Returns:
+        pd.DataFrame with correct amounts based on cost of purchase.
+    """
+    esg_conversion_rates = pd.read_csv(ESG_CONVERTION_RATES_PATH)
+    esg_conversion_rates.columns = esg_conversion_rates.columns.str.lower()
+    dataframe = dataframe.merge(esg_conversion_rates, on='class')
+
+    # Calculate amounts with cost of purchase if not available from cash flow statement
+    dataframe['amount'] = dataframe['amount'].fillna(dataframe['amount_eur'] * dataframe['cost_of_purchase'])
+    dataframe['unit'] = dataframe['unit'].fillna(dataframe['standard_unit_of_measure'])
 
     return dataframe
 
@@ -175,10 +200,10 @@ def main():
     # Read cash flow dataset
     cash_flow_dataset = pd.read_excel(INPUT_DATASET_PATH)
     cash_flow_dataset.columns = cash_flow_dataset.columns.str.lower()
-    cash_flow_dataset = cash_flow_dataset.map(lambda s: s.lower() if type(s) == str else s)
+    cash_flow_dataset = cash_flow_dataset.map(lambda s: s.lower() if isinstance(s, str) else s)
 
     # Load units of measurement variations
-    with open(UNITS_OF_MEASUREMENT_VARIATIONS_PATH) as json_reader:
+    with open(UNITS_OF_MEASUREMENT_VARIATIONS_PATH, encoding='utf8') as json_reader:
         unit_variations = json.load(json_reader)
 
     cash_flow_dataset['description'] = cash_flow_dataset['description'].apply(
@@ -186,25 +211,18 @@ def main():
     )
 
 
+    # Extract amounts from description field if possible
+    cash_flow_dataset = extract_amount_from_description(cash_flow_dataset)
+
     # Predict classes using trained model
     cash_flow_dataset ['class'] = predict_classes(cash_flow_dataset['description'])
 
-    # Extract amounts from description field if possible
-    cash_flow_dataset = extract_amount_from_description(cash_flow_dataset)
-    
-    
     # Only keep relevant columns
     cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class']]
 
-    # Get ESG indicators conversion rates and add info to dataset
-    ESG_conversion_rates = pd.read_csv(ESG_CONVERTION_RATES_PATH)
-    ESG_conversion_rates.columns = ESG_conversion_rates.columns.str.lower()
-    cash_flow_dataset = cash_flow_dataset.merge(ESG_conversion_rates, on='class')
-    
-    # Calculate amounts with cost of purchase if not available from cash flow statement
-    cash_flow_dataset['amount'] = cash_flow_dataset['amount'].fillna(cash_flow_dataset['amount_eur'] * cash_flow_dataset['cost_of_purchase'])
-    cash_flow_dataset['unit'] = cash_flow_dataset['unit'].fillna(cash_flow_dataset['standard_unit_of_measure'])
-    
+    # Add amounts if not already present
+    cash_flow_dataset = add_amounts_from_cost(cash_flow_dataset)
+
     # Calculate total revenue as sum of sales of products
     revenue = cash_flow_dataset.loc[cash_flow_dataset['gl_account'] == 'sales of products']['amount_eur'].sum()
 
@@ -214,14 +232,14 @@ def main():
     waste_disposal_dataframe['amount'] = waste_disposal_dataframe['amount_eur'] / waste_disposal_dataframe['cost_of_purchase']
     total_waste_produced = waste_disposal_dataframe['amount'].abs().sum()
     waste_intensity = round((total_waste_produced * 1000) / revenue, 2)
-    
+
 
     # Calculate total water consumed and water intensity
     water_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Water'].copy()
     water_bills_dataframe['amount'] = water_bills_dataframe['amount_eur'] / water_bills_dataframe['cost_of_purchase']
     total_water_consumed = water_bills_dataframe['amount'].abs().sum()
     water_intensity = round(total_water_consumed/revenue, 2)
-    
+
 
     # Calculate total energy absorbed and energy intensity
     electricity_bills_dataframe = cash_flow_dataset.loc[cash_flow_dataset['class'] == 'Electricity'].copy()
