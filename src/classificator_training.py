@@ -48,13 +48,13 @@ def main():
 
     if not os.path.exists(TRAINING_DATASET_CSV):
         raise FileNotFoundError(f"Training dataset not found: {TRAINING_DATASET_CSV}.")
-    
+
     # Load training dataset
     dataset = pd.read_csv(TRAINING_DATASET_CSV)
 
     if 'Description' not in dataset.columns or 'Class' not in dataset.columns:
         raise KeyError(f"Dataset must contain 'Description' and 'Class' columns. Found: {list(dataset.columns)}.")
-    
+
     texts = dataset['Description']
     labels = dataset['Class']
 
@@ -93,13 +93,13 @@ def main():
     try:
         # Create directory if needed
         os.makedirs(os.path.dirname(MODEL_OUTPUT_PATH), exist_ok=True)
-        
+
         # Save pipeline
         with open(MODEL_OUTPUT_PATH, 'wb') as f:
             pickle.dump(pipeline, f)
-        
+
         print(f"Model successfully saved to {MODEL_OUTPUT_PATH}.")
-        
+
     except PermissionError:
         raise PermissionError(f"No permission to write to {MODEL_OUTPUT_PATH}.")
     except OSError as e:

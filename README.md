@@ -2,29 +2,27 @@
 
 # Project folder structure
 ```
-GAIA
-├── architecture_documentation
+/GAIA
+├── /architecture_documentation
 │   ├── components.md
 │   └── image.png
-├── data
-│   ├── cash_flow_statements
+├── /data
+│   ├── /cash_flow_statements
 │   │   └── Syngenta_2023_Cash_Flow_Statement.xlsx
-│   ├── parser
+│   ├── /parser
 │   │   ├── conversion_rates.csv
 │   │   ├── ESG_indicators_conversion_rates.csv
 │   │   ├── units_of_measurement.csv
 │   │   └── units_of_measurement_variations.json
-│   └── xgboost
+│   └── /xgboost
 │       └── training_dataset.csv
-├── meta
+├── /meta
 │   ├── architecture.drawio
 │   ├── architecture.png
 │   └── GaiaLogo.png
-├── models
-│   └── cash_flow_classifier.pkl
 ├── README.md
 ├── requirements.txt
-└── src
+└── /src
     ├── classificator_training.py
     └── parser.py
 ```
@@ -61,7 +59,7 @@ uv pip install -r requirements.txt
 
 
 ## Running Python scripts
-The first script you need to run in order to compute ESG indicators is `src/classificator_training`.
+The first script you need to run in order to compute ESG indicators is `src/classificator_training.py`.
 ```
 python src/classificator_training.py
 ```

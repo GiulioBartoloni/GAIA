@@ -134,8 +134,44 @@ def standardize_units_of_measurement(dataset:pd.DataFrame)->pd.DataFrame:
 
     return result
 
+def extract_amount_from_description(dataframe: pd.DataFrame)->pd.DataFrame:
+    """Extract amount from description field from cash flow statement dataframe standardizing it.
+
+    Args:
+        dataframe: cash flow statement dataframe.
+    
+    Returns:
+        pd.DataFrame: dataframe containing two new columns 'amount' and 'unit'.
+    """
+
+    # Import units of measurements and extract amounts if present in the description field
+    units_of_measurement_dataset = pd.read_csv(UNITS_OF_MEASUREMENT_DATASET_PATH)
+    units_of_measurement_dataset.columns = units_of_measurement_dataset.columns.str.lower()
+    units_of_measurement_dataset = units_of_measurement_dataset.map(lambda s: s.lower() if type(s) == str else s)
+
+    all_units='|'.join(list(units_of_measurement_dataset['unit']))
+    pattern = rf'([\d.,]+)\s*({all_units})\b'
+
+    dataframe[['amount', 'unit']] = dataframe['description'].str.extract(pattern, flags=re.IGNORECASE)
+
+
+    # Parse amount fields and standardize its unit of measurement
+    dataframe = parse_amount_field(dataset=dataframe, field='amount')
+    dataframe = parse_amount_field(dataset=dataframe, field='amount_eur')
+    dataframe = standardize_units_of_measurement(dataframe)
+
+    return dataframe
+
 
 def main():
+    """
+    The main function:
+    1. reads cash flow statement.
+    2. predicts classes using previously trained XGBoost model.
+    3. tries extracting amounts from descriptions.
+    4. calculates amounts with cost of purchase where applicable if not in description.
+    5. calculates ESG indicators and returns them.
+    """
     # Read cash flow dataset
     cash_flow_dataset = pd.read_excel(INPUT_DATASET_PATH)
     cash_flow_dataset.columns = cash_flow_dataset.columns.str.lower()
@@ -153,22 +189,9 @@ def main():
     # Predict classes using trained model
     cash_flow_dataset ['class'] = predict_classes(cash_flow_dataset['description'])
 
-
-    # Import units of measurements and extract amounts if present in the description field
-    units_of_measurment_dataset = pd.read_csv(UNITS_OF_MEASUREMENT_DATASET_PATH)
-    units_of_measurment_dataset.columns = units_of_measurment_dataset.columns.str.lower()
-    units_of_measurment_dataset = units_of_measurment_dataset.map(lambda s: s.lower() if type(s) == str else s)
-
-    all_units='|'.join(list(units_of_measurment_dataset['unit']))
-    pattern = rf'([\d.,]+)\s*({all_units})\b'
-
-    cash_flow_dataset[['amount', 'unit']] = cash_flow_dataset['description'].str.extract(pattern, flags=re.IGNORECASE)
-
-
-    # Parse amount fields and standardize its unit of measurement
-    cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='amount')
-    cash_flow_dataset = parse_amount_field(dataset=cash_flow_dataset, field='amount_eur')
-    cash_flow_dataset = standardize_units_of_measurement(cash_flow_dataset)
+    # Extract amounts from description field if possible
+    cash_flow_dataset = extract_amount_from_description(cash_flow_dataset)
+    
     
     # Only keep relevant columns
     cash_flow_dataset = cash_flow_dataset[['description','gl_account','amount','unit','amount_eur','class']]
